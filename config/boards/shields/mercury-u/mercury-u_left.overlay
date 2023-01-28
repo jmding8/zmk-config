@@ -1,4 +1,4 @@
-#include "mercury.dtsi"
+#include "mercury-u.dtsi"
 
 &kscan0 {
 	col-gpios
