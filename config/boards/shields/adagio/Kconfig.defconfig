@@ -8,15 +8,6 @@ config ZMK_SPLIT_BLE_ROLE_CENTRAL
 
 endif
 
-
-if SHIELD_ADAGIO_RIGHT
-
-config ZMK_KEYBOARD_NAME
-	default "Adagio-R"
-
-endif
-
-
 if SHIELD_ADAGIO_LEFT || SHIELD_ADAGIO_RIGHT
 
 config ZMK_SPLIT
