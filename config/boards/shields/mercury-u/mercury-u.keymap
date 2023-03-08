@@ -181,11 +181,6 @@
             key-positions = <16 17>;
             bindings = <&kp ESC>;
         };
-        combo_quote {
-            timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
-            key-positions = <18 19>;
-            bindings = <&kp QUOT>;
-        };
         combo_caps {
             timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
             key-positions = <30 31>;
