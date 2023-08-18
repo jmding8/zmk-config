@@ -208,19 +208,20 @@
         // Mode switching combos:
         combo_sys {
             timeout-ms = <LH_COMBO_TIMEOUT>;
-            key-positions = <1 2 3>;
+            key-positions = <0 12 36>;
             bindings = <&sl SYS>;
         };
-        combo_standard {
-            timeout-ms = <LH_COMBO_TIMEOUT>;
-            key-positions = <3 4 5>;
-            bindings = <&to WIN>;
-        };
-        combo_game {
-            timeout-ms = <LH_COMBO_TIMEOUT>;
-            key-positions = <2 3 4>;
-            bindings = <&to GAM>;
-        };
+//        combo_standard and combo_game are disabled in favor of word combos.
+//        combo_standard {
+//            timeout-ms = <LH_COMBO_TIMEOUT>;
+//            key-positions = <3 4 5>;
+//            bindings = <&to WIN>;
+//        };
+//        combo_game {
+//            timeout-ms = <LH_COMBO_TIMEOUT>;
+//            key-positions = <2 3 4>;
+//            bindings = <&to GAM>;
+//        };
 
         // Slow combos:
         // Because these combos use only keys controlled by a single index finger,
