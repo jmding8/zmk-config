@@ -108,7 +108,7 @@
         m_was: macro_was { label = "MACRO_WAS"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp W &kp A &kp S &kp SPC>; };
         m_he: macro_he { label = "MACRO_HE"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp H &kp E &kp SPC>; };
         m_with: macro_with { label = "MACRO_WITH"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp W &kp I &kp T &kp H &kp SPC>; };
-//        m_this: macro_this { label = "MACRO_THIS"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp T &kp H &kp I &kp S &kp SPC>; };
+        m_this: macro_this { label = "MACRO_THIS"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp T &kp H &kp I &kp S &kp SPC>; };
         m_as: macro_as { label = "MACRO_AS"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp A &kp S &kp SPC>; };
         m_we: macro_we { label = "MACRO_WE"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp W &kp E &kp SPC>; };
         m_be: macro_be { label = "MACRO_BE"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp B &kp E &kp SPC>; };
