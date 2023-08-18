@@ -222,7 +222,7 @@
         combo_of { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <16 9>; bindings = <&m_of>; };
         combo_in { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <8 30>; bindings = <&m_in>; };
         combo_that { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <13 18 5>; bindings = <&m_that>; };
-        combo_you { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <22 9 6>; bindings = <&m_you>; };
+        combo_you { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <9 6>; bindings = <&m_you>; };
         combo_it { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <8 5>; bindings = <&m_it>; };
         combo_is { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <8 14>; bindings = <&m_is>; };
         combo_for { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <16 9 4>; bindings = <&m_for>; };
