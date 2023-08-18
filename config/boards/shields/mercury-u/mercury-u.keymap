@@ -111,7 +111,6 @@
         m_with: macro_with { label = "MACRO_WITH"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp W &kp I &kp T &kp H &kp SPC>; };
         m_this: macro_this { label = "MACRO_THIS"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp T &kp H &kp I &kp S &kp SPC>; };
         m_as: macro_as { label = "MACRO_AS"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp A &kp S &kp SPC>; };
-        m_n't: macro_n't { label = "MACRO_N'T"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp N &kp ' &kp T &kp SPC>; };
         m_we: macro_we { label = "MACRO_WE"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp W &kp E &kp SPC>; };
         m_be: macro_be { label = "MACRO_BE"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp B &kp E &kp SPC>; };
         m_have: macro_have { label = "MACRO_HAVE"; compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <WORD_COMBO_PAUSE>; bindings = <&macro_tap &kp H &kp A &kp V &kp E &kp SPC>; };
@@ -328,7 +327,6 @@
         combo_with { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <18 8 5 2>; bindings = <&m_with>; };
         combo_this { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <18 8 14 5>; bindings = <&m_this>; };
         combo_as { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <13 14>; bindings = <&m_as>; };
-        combo_n't { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <>; bindings = <&m_n't>; };
         combo_we { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <3 2>; bindings = <&m_we>; };
         combo_be { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <22 29>; bindings = <&m_be>; };
         combo_have { timeout-ms = <WORD_COMBO_TIMEOUT>; key-positions = <22 13 18 28>; bindings = <&m_have>; };
