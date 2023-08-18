@@ -97,7 +97,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <WORD_COMBO_PAUSE>;
-            bindings = <&macro_tap &kp T &kp H &kp E>;
+            bindings = <&macro_tap &kp T &kp H &kp E &kp SPC>;
         };
 
         m_to: macro_to {
@@ -105,7 +105,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <WORD_COMBO_PAUSE>;
-            bindings = <&macro_tap &kp T &kp O>;
+            bindings = <&macro_tap &kp T &kp O &kp SPC>;
         };
 
         m_and: macro_and {
@@ -113,7 +113,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <WORD_COMBO_PAUSE>;
-            bindings = <&macro_tap &kp A &kp N &kp D>;
+            bindings = <&macro_tap &kp A &kp N &kp D &kp SPC>;
         };
 
         m_of: macro_of {
@@ -121,7 +121,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <WORD_COMBO_PAUSE>;
-            bindings = <&macro_tap &kp O &kp F>;
+            bindings = <&macro_tap &kp O &kp F &kp SPC>;
         };
 
         m_that: macro_that {
@@ -129,7 +129,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <WORD_COMBO_PAUSE>;
-            bindings = <&macro_tap &kp T &kp H &kp A &kp T>;
+            bindings = <&macro_tap &kp T &kp H &kp A &kp T &kp SPC>;
         };
     };
 
