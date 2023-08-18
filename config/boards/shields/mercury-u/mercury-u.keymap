@@ -41,7 +41,9 @@
 // 17Aug2023
 // #define WORD_COMBO_TIMEOUT 100 <= too long, typing 9 (d+f (num) + o) triggers "of" instead of 9
 #define WORD_COMBO_TIMEOUT 50
-#define WORD_COMBO_PAUSE 5
+// #define WORD_COMBO_PAUSE 20 <= too long, combos take too long to come out
+// #define WORD_COMBO_PAUSE 5 <= too short, some combos will come out in the wrong order
+#define WORD_COMBO_PAUSE 10
 
 / {
     behaviors {
