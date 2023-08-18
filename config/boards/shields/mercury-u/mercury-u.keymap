@@ -37,7 +37,10 @@
 #define RH_COMBO_TIMEOUT 50
 #define LH_COMBO_TIMEOUT 50
 #define SINGLE_FINGER_COMBO_TIMEOUT 200
+
+// 17Aug2023
 #define WORD_COMBO_TIMEOUT 100
+#define WORD_COMBO_PAUSE 5
 
 / {
     behaviors {
@@ -93,30 +96,40 @@
             label = "MACRO_THE";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            bindings
-                = <&macro_tap &kp T &kp H &kp E>
-                ;
+            wait-ms = <WORD_COMBO_PAUSE>;
+            bindings = <&macro_tap &kp T &kp H &kp E>;
         };
 
         m_to: macro_to {
             label = "MACRO_TO";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            bindings
-                = <&macro_tap &kp T &kp O>
-                ;
+            wait-ms = <WORD_COMBO_PAUSE>;
+            bindings = <&macro_tap &kp T &kp O>;
         };
 
         m_and: macro_and {
             label = "MACRO_AND";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            bindings
-                = <&macro_tap &kp A &kp N &kp D>
-                ;
+            wait-ms = <WORD_COMBO_PAUSE>;
+            bindings = <&macro_tap &kp A &kp N &kp D>;
+        };
+
+        m_of: macro_of {
+            label = "MACRO_OF";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <WORD_COMBO_PAUSE>;
+            bindings = <&macro_tap &kp O &kp F>;
+        };
+
+        m_that: macro_that {
+            label = "MACRO_that";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <WORD_COMBO_PAUSE>;
+            bindings = <&macro_tap &kp T &kp H &kp A &kp T>;
         };
     };
 
@@ -239,7 +252,19 @@
         combo_and {
             timeout-ms = <WORD_COMBO_TIMEOUT>;
             key-positions = <13 15 30>;
-            bindings = <&m_the>;
+            bindings = <&m_and>;
+        };
+
+        combo_of {
+            timeout-ms = <WORD_COMBO_TIMEOUT>;
+            key-positions = <9 16>;
+            bindings = <&m_of>;
+        };
+
+        combo_that {
+            timeout-ms = <WORD_COMBO_TIMEOUT>;
+            key-positions = <5 13 18>;
+            bindings = <&m_that>;
         };
     };
 
