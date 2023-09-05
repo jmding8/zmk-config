@@ -230,7 +230,7 @@
 
         num_layer {
             bindings = <
-&trans  &trans  &trans    &trans  &trans  &trans  /**/  &kp GRAV   &kp N7  &kp N8  &kp N9  &kp LBKT  &kp RBKT
+&trans  &trans  &trans    &trans  &trans  &trans  /**/  &kp GRAV   &kp N7  &kp N8  &kp N9  &trans    &trans
 &trans  &trans  &kp LSFT  &mo DL  &trans  &trans  /**/  &kp EQL    &kp N4  &kp N5  &kp N6  &kp N0    &kp DOT
 &trans  &trans  &trans    &trans  &trans  &trans  /**/  &kp MINUS  &kp N1  &kp N2  &kp N3  &kp FSLH  &kp DOT
                           &trans  &trans  &trans  /**/  &trans     &trans  &trans
@@ -239,7 +239,7 @@
 
         function_layer {
             bindings = <
-&trans  &trans    &trans  &trans  &trans  &trans  /**/  &kp F12  &kp F7  &kp F8  &kp F9  &kp LBKT  &kp RBKT
+&trans  &trans    &trans  &trans  &trans  &trans  /**/  &kp F12  &kp F7  &kp F8  &kp F9  &trans    &trans
 &trans  &kp LSFT  &trans  &trans  &trans  &trans  /**/  &kp F11  &kp F4  &kp F5  &kp F6  &trans    &kp DOT
 &trans  &trans    &trans  &trans  &trans  &trans  /**/  &kp F10  &kp F1  &kp F2  &kp F3  &kp FSLH  &kp DOT
                           &trans  &trans  &trans  /**/  &trans   &trans  &trans
@@ -248,10 +248,10 @@
 
         nav_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &kp FSLH  &trans  /**/  &trans  &trans    &kp UARW  &kp PGUP  &kp DEL   &trans
-&trans  &trans  &trans  &trans  &trans    &trans  /**/  &trans  &kp LARW  &kp DARW  &kp RARW  &kp BKSP  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  /**/  &trans  &kp PGDN  &kp HOME  &kp END   &kp RET   &trans
-                        &trans  &trans    &trans  /**/  &trans  &trans    &trans
+&trans  &trans  &trans  &trans    &kp FSLH  &trans  /**/  &trans  &trans    &kp UARW  &kp PGUP  &kp DEL   &trans
+&trans  &trans  &trans  &kp LBKT  &kp RBKT  &trans  /**/  &trans  &kp LARW  &kp DARW  &kp RARW  &kp BKSP  &trans
+&trans  &trans  &trans  &trans    &trans    &trans  /**/  &trans  &kp PGDN  &kp HOME  &kp END   &kp RET   &trans
+                        &trans    &trans    &trans  /**/  &trans  &trans    &trans
             >;
         };
 
