@@ -155,12 +155,12 @@
         };
         combo_standard {
             timeout-ms = <LH_COMBO_TIMEOUT>;
-            key-positions = <3 4 5>;
+            key-positions = <13 14 15>;
             bindings = <&to WIN>;
         };
         combo_game {
             timeout-ms = <LH_COMBO_TIMEOUT>;
-            key-positions = <2 3 4>;
+            key-positions = <25 26 27>;
             bindings = <&to GAM>;
         };
 
