@@ -15,8 +15,8 @@
 #define SFL 9
 #define KL  10
 #define LL  11
-#define TL  12
-#define RGL 13
+#define CL  12
+#define XVL 13
 
 // 11Jul2022
 // still miss the X+C => Tab combo on rare occasions, increase timeout from 75 to 100
@@ -80,27 +80,27 @@
                 ;
         };
 
-        mcr: macro_r {
-            label = "MACRO_R";
+        mcx: macro_x {
+            label = "MACRO_X";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             bindings
-                = <&macro_press &mo RGL &kp LSFT>
+                = <&macro_press &mo XVL &kp LSFT>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo RGL &kp LSFT>
+                , <&macro_release &mo XVL &kp LSFT>
                 ;
         };
 
-        mcg: macro_g {
-            label = "MACRO_G";
+        mcv: macro_v {
+            label = "MACRO_V";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
             bindings
-                = <&macro_press &mo RGL &mo FUN>
+                = <&macro_press &mo XVL &mo FUN>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo RGL &mo FUN>
+                , <&macro_release &mo XVL &mo FUN>
                 ;
         };
     };
@@ -156,34 +156,34 @@
             hold-trigger-key-positions = <20 36 37 38 40 41>;
         };
 
-        rmt: r_macro_tap {
+        xmt: x_macro_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "R_MACRO_TAP";
+            label = "X_MACRO_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
-            bindings = <&mcr>, <&kp>;
-            hold-trigger-key-positions = <5 17 36 37 38 40 41>;
+            bindings = <&mcx>, <&kp>;
+            hold-trigger-key-positions = <27 28 36 37 38 40 41>;
         };
 
-        tlt: t_layer_tap {
+        clt: c_layer_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "T_LAYER_TAP";
+            label = "C_LAYER_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <4 17 36 37 38 40 41>;
+            hold-trigger-key-positions = <26 28 36 37 38 40 41>;
         };
 
-        gmt: g_macro_tap {
+        vmt: v_macro_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "G_MACRO_TAP";
+            label = "V_MACRO_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
-            bindings = <&mcg>, <&kp>;
-            hold-trigger-key-positions = <4 5 36 37 38 40 41>;
+            bindings = <&mcv>, <&kp>;
+            hold-trigger-key-positions = <26 27 36 37 38 40 41>;
         };
     };
 
@@ -249,9 +249,9 @@
 
         windows_layer {
             bindings = <
-&none    &kp Q        &kp W     &kp E      &rmt R R  &tlt TL T /**/  &kp Y    &kp U    &kp I      &kp O     &kp P     &none
-&none    &kp A        &smt S S  &dlt DL D  &fmt F F  &gmt G G  /**/  &kp H    &kp J    &klt KL K  &lmt L L  &kp SCLN  &none
-&none    &kp Z        &kp X     &kp C      &kp V     &kp B     /**/  &kp N    &kp M    &kp CMMA   &kp DOT   &kp FSLH  &none
+&none    &kp Q        &kp W     &kp E      &kp R     &kp T     /**/  &kp Y    &kp U    &kp I      &kp O     &kp P     &none
+&none    &kp A        &smt S S  &dlt DL D  &fmt F F  &kp G     /**/  &kp H    &kp J    &klt KL K  &lmt L L  &kp SCLN  &none
+&none    &kp Z        &xmt X X  &clt CL C  &vmt V V  &kp B     /**/  &kp N    &kp M    &kp CMMA   &kp DOT   &kp FSLH  &none
                                 &kp LGUI   &kp LALT  &kp LCTL  /**/  &kp SPC  &mo NAV  &mo MED
             >;
         };
@@ -285,9 +285,9 @@
 
         function_layer {
             bindings = <
-&trans  &trans    &trans  &trans  &kp LSFT &mo TL  /**/  &kp F12  &kp F7  &kp F8  &kp F9  &kp BSLH  &trans
-&trans  &trans    &trans  &trans  &trans   &trans  /**/  &kp F11  &kp F4  &kp F5  &kp F6  &kp LBKT  &trans
-&trans  &trans    &trans  &trans  &trans   &trans  /**/  &kp F10  &kp F1  &kp F2  &kp F3  &kp RBKT  &trans
+&trans  &trans  &trans    &trans  &tran    &trans  /**/  &kp F12  &kp F7  &kp F8  &kp F9  &kp BSLH  &trans
+&trans  &trans  &trans    &trans  &trans   &trans  /**/  &kp F11  &kp F4  &kp F5  &kp F6  &kp LBKT  &trans
+&trans  &trans  &kp LSFT  &mo CL  &trans   &trans  /**/  &kp F10  &kp F1  &kp F2  &kp F3  &kp RBKT  &trans
                           &trans  &trans   &trans  /**/  &trans   &trans  &trans
             >;
         };
@@ -355,20 +355,20 @@
             >;
         };
 
-        t_key_layer {
+        c_key_layer {
             bindings = <
-&trans  &trans  &trans    &trans    &kp LSFT &none   /**/  &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans    &trans    &trans   &mo FUN /**/  &trans  &trans  &trans  &trans    &trans  &trans
 &trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &kp LSFT  &none     &mo FUN  &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
                           &trans    &trans   &trans  /**/  &trans  &trans  &trans
             >;
         };
 
-        rg_key_layer {
+        xv_key_layer {
             bindings = <
-&trans  &trans  &trans    &trans    &trans   &mo TL  /**/  &trans  &trans  &trans  &trans    &trans  &trans
 &trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
 &trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans    &mo CL    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
                           &trans    &trans   &trans  /**/  &trans  &trans  &trans
             >;
         };
