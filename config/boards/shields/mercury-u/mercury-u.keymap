@@ -285,18 +285,18 @@
 
         function_layer {
             bindings = <
-&trans  &trans    &trans  &trans  &kp LSFT &mo TL  /**/  &kp F12  &kp F7  &kp F8  &kp F9  &kp DOT   &trans
-&trans  &trans    &trans  &trans  &trans   &trans  /**/  &kp F11  &kp F4  &kp F5  &kp F6  &trans    &trans
-&trans  &trans    &trans  &trans  &trans   &trans  /**/  &kp F10  &kp F1  &kp F2  &kp F3  &kp FSLH  &trans
+&trans  &trans    &trans  &trans  &kp LSFT &mo TL  /**/  &kp F12  &kp F7  &kp F8  &kp F9  &kp BSLH  &trans
+&trans  &trans    &trans  &trans  &trans   &trans  /**/  &kp F11  &kp F4  &kp F5  &kp F6  &kp LBKT  &trans
+&trans  &trans    &trans  &trans  &trans   &trans  /**/  &kp F10  &kp F1  &kp F2  &kp F3  &kp RBKT  &trans
                           &trans  &trans   &trans  /**/  &trans   &trans  &trans
             >;
         };
 
         nav_layer {
             bindings = <
-&trans  &trans  &kp LBKT  &kp RBKT  &kp BSLH  &trans  /**/  &trans  &trans    &kp UARW  &kp PGUP  &kp DEL   &trans
+&trans  &trans  &trans    &trans    &trans    &trans  /**/  &trans  &trans    &kp UARW  &kp PGUP  &kp DEL   &trans
 &trans  &trans  &trans    &trans    &trans    &trans  /**/  &trans  &kp LARW  &kp DARW  &kp RARW  &kp BKSP  &trans
-&trans  &trans  &kp LBRC  &kp RBRC  &kp PIPE  &trans  /**/  &trans  &kp PGDN  &kp HOME  &kp END   &kp RET   &trans
+&trans  &trans  &trans    &trans    &trans    &trans  /**/  &trans  &kp PGDN  &kp HOME  &kp END   &kp RET   &trans
                           &trans    &trans    &trans  /**/  &trans  &trans    &trans
             >;
         };
