@@ -193,7 +193,7 @@
 
     combos {
         compatible = "zmk,combos";
-        // Mode switching combos:
+
         combo_sys {
             timeout-ms = <LH_COMBO_TIMEOUT>;
             key-positions = <1 2 3>;
@@ -210,10 +210,9 @@
             bindings = <&to GAM>;
         };
 
-        // Slow combos:
-        // Because these combos use only keys controlled by a single index finger,
-        // it is very unlikely that a standard touch-typist will accidentally trigger
-        // during normal typing. We can use a very long timeout for these.
+        // Slow combos: these combos exclusively use keys controlled by a single index-finger,
+        // which makes them very unlikely to be accidentally triggered by a standard touch-typist
+        // them during normal typing, even with a very long timeout.
         combo_tab {
             timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
             key-positions = <4 17>;
@@ -221,9 +220,6 @@
         };
         combo_esc {
             timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
-        // 16,17 is a great location for ESC: convenient and safe. However, it is just affected
-        // by the hold-tap => combo mis-fire bug: https://github.com/zmkfirmware/zmk/issues/1395
-        // Until that is resolved, use positions 4,5
             key-positions = <16 17>;
             bindings = <&kp ESC>;
         };
@@ -249,28 +245,28 @@
 
         windows_layer {
             bindings = <
-&none    &kp Q        &kp W     &kp E      &kp R     &kp T     /**/  &kp Y    &kp U    &kp I      &kp O     &kp P     &none
-&none    &kp A        &smt S S  &dlt DL D  &fmt F F  &kp G     /**/  &kp H    &kp J    &klt KL K  &lmt L L  &kp SCLN  &none
-&none    &kp Z        &xmt X X  &clt CL C  &vmt V V  &kp B     /**/  &kp N    &kp M    &kp CMMA   &kp DOT   &kp FSLH  &none
-                                &kp LGUI   &kp LALT  &kp LCTL  /**/  &kp SPC  &mo NAV  &mo MED
+&none  &kp Q  &kp W     &kp E      &kp R     &kp T     /**/  &kp Y    &kp U    &kp I      &kp O     &kp P     &none
+&none  &kp A  &smt S S  &dlt DL D  &fmt F F  &kp G     /**/  &kp H    &kp J    &klt KL K  &lmt L L  &kp SCLN  &none
+&none  &kp Z  &xmt X X  &clt CL C  &vmt V V  &kp B     /**/  &kp N    &kp M    &kp CMMA   &kp DOT   &kp FSLH  &none
+                        &kp LGUI   &kp LALT  &kp LCTL  /**/  &kp SPC  &mo NAV  &mo MED
             >;
         };
         
         apple_layer {
             bindings = <
-&trans  &trans  &trans   &trans    &trans    &trans   /**/  &trans   &trans   &trans   &trans  &trans  &trans
-&trans  &trans  &trans   &trans    &trans    &trans   /**/  &trans   &trans   &trans   &trans  &trans  &trans
-&trans  &trans  &trans   &trans    &trans    &trans   /**/  &trans   &trans   &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans    &trans    /**/  &trans   &trans   &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans    &trans    /**/  &trans   &trans   &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans    &trans    /**/  &trans   &trans   &trans   &trans  &trans  &trans
                         &kp LCTL  &kp LALT  &kp LGUI  /**/  &kp SPC  &mo NAV  &mo MED
             >;
         };
 
         game_layer {
             bindings = <
-&kp TAB   &kp Q  &kp W  &kp E      &kp R     &kp T     /**/  &kp Y    &kp U    &kp I     &kp O    &kp P     &kp BSLH
-&kp ESC   &kp A  &kp S  &kp D      &kp F     &kp G     /**/  &kp H    &kp J    &kp K     &kp L    &kp SCLN  &kp QUOT
-&kp LSFT  &kp Z  &kp X  &kp C      &kp V     &kp B     /**/  &kp N    &kp M    &kp CMMA  &kp DOT  &kp FSLH  &kp RSFT
-                        &kp GRAV   &kp LALT  &kp LCTL  /**/  &kp SPC  &mo NAV  &mo MED
+&kp TAB   &kp Q  &kp W  &kp E     &kp R     &kp T     /**/  &kp Y    &kp U    &kp I     &kp O    &kp P     &kp BSLH
+&kp ESC   &kp A  &kp S  &kp D     &kp F     &kp G     /**/  &kp H    &kp J    &kp K     &kp L    &kp SCLN  &kp QUOT
+&kp LSFT  &kp Z  &kp X  &kp C     &kp V     &kp B     /**/  &kp N    &kp M    &kp CMMA  &kp DOT  &kp FSLH  &kp RSFT
+                        &kp GRAV  &kp LALT  &kp LCTL  /**/  &kp SPC  &mo NAV  &mo MED
             >;
         };
 
@@ -294,10 +290,10 @@
 
         nav_layer {
             bindings = <
-&trans  &trans  &trans    &trans    &trans    &trans  /**/  &trans  &trans    &kp UARW  &kp PGUP  &kp DEL   &trans
-&trans  &trans  &trans    &trans    &trans    &trans  /**/  &trans  &kp LARW  &kp DARW  &kp RARW  &kp BKSP  &trans
-&trans  &trans  &trans    &trans    &trans    &trans  /**/  &trans  &kp PGDN  &kp HOME  &kp END   &kp RET   &trans
-                          &trans    &trans    &trans  /**/  &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &trans    &kp UARW  &kp PGUP  &kp DEL   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &kp LARW  &kp DARW  &kp RARW  &kp BKSP  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &kp PGDN  &kp HOME  &kp END   &kp RET   &trans
+                        &trans  &trans  &trans  /**/  &trans  &trans    &trans
             >;
         };
 
@@ -321,55 +317,55 @@
 
         d_key_layer {
             bindings = <
-&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &kp LSFT  &none     &mo NUM  &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-                          &trans    &trans   &trans  /**/  &trans  &trans  &trans
+&trans  &trans  &trans    &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LSFT  &none   &mo NUM  &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans   &trans  /**/  &trans  &trans  &trans
             >;
         };
 
         sf_key_layer {
             bindings = <
-&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans    &mo DL    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-                          &trans    &trans   &trans  /**/  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &mo DL  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans   &trans  /**/  &trans  &trans  &trans
             >;
         };
 
         k_key_layer {
             bindings = <
-&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &none   &kp RSFT  &trans  &trans
-&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-                          &trans    &trans   &trans  /**/  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &trans  &none   &kp RSFT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
+                        &trans  &trans  &trans  /**/  &trans  &trans  &trans
             >;
         };
 
         l_key_layer {
             bindings = <
-&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &mo KL  &trans    &trans  &trans
-&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-                          &trans    &trans   &trans  /**/  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &trans  /**/  &trans  &trans  &mo KL  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans   &trans  /**/  &trans  &trans  &trans
             >;
         };
 
         c_key_layer {
             bindings = <
-&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &kp LSFT  &none     &mo FUN  &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-                          &trans    &trans   &trans  /**/  &trans  &trans  &trans
+&trans  &trans  &trans    &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LSFT  &none   &mo FUN  &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans   &trans  /**/  &trans  &trans  &trans
             >;
         };
 
         xv_key_layer {
             bindings = <
-&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans    &mo CL    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
-                          &trans    &trans   &trans  /**/  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &mo CL  &trans  &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  /**/  &trans  &trans  &trans
             >;
         };
     };
