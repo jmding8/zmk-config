@@ -15,6 +15,8 @@
 #define SFL 9
 #define KL  10
 #define LL  11
+#define TL  12
+#define RGL 13
 
 // 11Jul2022
 // still miss the X+C => Tab combo on rare occasions, increase timeout from 75 to 100
@@ -39,17 +41,7 @@
 #define SINGLE_FINGER_COMBO_TIMEOUT 200
 
 / {
-    behaviors {
-        pht: pos_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "POS_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <LH_COMBO_TIMEOUT>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <12 13>;
-        };
-    };
+    behaviors {};
 
     macros {
         mcs: macro_s {
@@ -85,6 +77,30 @@
                 = <&macro_press &mo KL &kp RSFT>
                 , <&macro_pause_for_release>
                 , <&macro_release &mo KL &kp RSFT>
+                ;
+        };
+
+        mcr: macro_r {
+            label = "MACRO_R";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &mo RGL &kp LSFT>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo RGL &kp LSFT>
+                ;
+        };
+
+        mcg: macro_g {
+            label = "MACRO_G";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &mo RGL &mo FUN>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo RGL &mo FUN>
                 ;
         };
     };
@@ -138,6 +154,36 @@
             tapping-term-ms = <RH_COMBO_TIMEOUT>;
             bindings = <&mcl>, <&kp>;
             hold-trigger-key-positions = <20 36 37 38 40 41>;
+        };
+
+        rmt: r_macro_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "R_MACRO_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <LH_COMBO_TIMEOUT>;
+            bindings = <&mcr>, <&kp>;
+            hold-trigger-key-positions = <5 17 36 37 38 40 41>;
+        };
+
+        tlt: t_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "T_LAYER_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <LH_COMBO_TIMEOUT>;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <4 17 36 37 38 40 41>;
+        };
+
+        gmt: g_macro_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "G_MACRO_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <LH_COMBO_TIMEOUT>;
+            bindings = <&mcg>, <&kp>;
+            hold-trigger-key-positions = <4 5 36 37 38 40 41>;
         };
     };
 
@@ -204,7 +250,7 @@
         windows_layer {
             bindings = <
 &none    &kp Q        &kp W     &kp E      &kp R     &kp T     /**/  &kp Y    &kp U    &kp I      &kp O     &kp P     &none
-&mo FUN  &pht LSFT A  &smt S S  &dlt DL D  &fmt F F  &kp G     /**/  &kp H    &kp J    &klt KL K  &lmt L L  &kp SCLN  &none
+&none    &kp A        &smt S S  &dlt DL D  &fmt F F  &kp G     /**/  &kp H    &kp J    &klt KL K  &lmt L L  &kp SCLN  &none
 &none    &kp Z        &kp X     &kp C      &kp V     &kp B     /**/  &kp N    &kp M    &kp CMMA   &kp DOT   &kp FSLH  &none
                                 &kp LGUI   &kp LALT  &kp LCTL  /**/  &kp SPC  &mo NAV  &mo MED
             >;
@@ -239,10 +285,10 @@
 
         function_layer {
             bindings = <
-&trans  &trans    &trans  &trans  &trans  &trans  /**/  &kp F12  &kp F7  &kp F8  &kp F9  &kp DOT   &trans
-&trans  &kp LSFT  &trans  &trans  &trans  &trans  /**/  &kp F11  &kp F4  &kp F5  &kp F6  &trans    &trans
-&trans  &trans    &trans  &trans  &trans  &trans  /**/  &kp F10  &kp F1  &kp F2  &kp F3  &kp FSLH  &trans
-                          &trans  &trans  &trans  /**/  &trans   &trans  &trans
+&trans  &trans    &trans  &trans  &kp LSFT &mo TL  /**/  &kp F12  &kp F7  &kp F8  &kp F9  &kp DOT   &trans
+&trans  &trans    &trans  &trans  &trans   &trans  /**/  &kp F11  &kp F4  &kp F5  &kp F6  &trans    &trans
+&trans  &trans    &trans  &trans  &trans   &trans  /**/  &kp F10  &kp F1  &kp F2  &kp F3  &kp FSLH  &trans
+                          &trans  &trans   &trans  /**/  &trans   &trans  &trans
             >;
         };
 
@@ -304,6 +350,24 @@
             bindings = <
 &trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
 &trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &mo KL  &trans    &trans  &trans
+&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
+                          &trans    &trans   &trans  /**/  &trans  &trans  &trans
+            >;
+        };
+
+        t_key_layer {
+            bindings = <
+&trans  &trans  &trans    &trans    &kp LSFT &none   /**/  &trans  &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans    &trans    &trans   &mo FUN /**/  &trans  &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
+                          &trans    &trans   &trans  /**/  &trans  &trans  &trans
+            >;
+        };
+
+        rg_key_layer {
+            bindings = <
+&trans  &trans  &trans    &trans    &trans   &mo TL  /**/  &trans  &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
 &trans  &trans  &trans    &trans    &trans   &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
                           &trans    &trans   &trans  /**/  &trans  &trans  &trans
             >;
