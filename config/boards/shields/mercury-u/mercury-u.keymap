@@ -170,7 +170,7 @@
         // during normal typing. We can use a very long timeout for these.
         combo_tab {
             timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
-            key-positions = <4 17>;
+            key-positions = <4 16>;
             bindings = <&kp TAB>;
         };
         combo_esc {
