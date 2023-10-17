@@ -113,7 +113,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
             bindings = <&mcs>, <&kp>;
-            hold-trigger-key-positions = <15 16 36 37 38 40 41>;
+            hold-trigger-key-positions = <3b3 3b4 6b4 6b5 6b6 7b2 7b3>;
         };
 
         dlt: d_layer_tap {
@@ -123,7 +123,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <14 16 36 37 38 40 41>;
+            hold-trigger-key-positions = <3b2 3b4 6b4 6b5 6b6 7b2 7b3>;
         };
 
         fmt: f_macro_tap {
@@ -133,7 +133,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
             bindings = <&mcf>, <&kp>;
-            hold-trigger-key-positions = <14 15 36 37 38 40 41>;
+            hold-trigger-key-positions = <3b2 3b3 6b4 6b5 6b6 7b2 7b3>;
         };
 
         klt: k_layer_tap {
@@ -143,7 +143,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <RH_COMBO_TIMEOUT>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <21 36 37 38 40 41>;
+            hold-trigger-key-positions = <4b4 6b4 6b5 6b6 7b2 7b3>;
         };
         
         lmt: l_macro_tap {
@@ -153,7 +153,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <RH_COMBO_TIMEOUT>;
             bindings = <&mcl>, <&kp>;
-            hold-trigger-key-positions = <20 36 37 38 40 41>;
+            hold-trigger-key-positions = <4b3 6b4 6b5 6b6 7b2 7b3>;
         };
 
         xmt: x_macro_tap {
@@ -163,7 +163,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
             bindings = <&mcx>, <&kp>;
-            hold-trigger-key-positions = <27 28 36 37 38 40 41>;
+            hold-trigger-key-positions = <4b8 4b9 6b4 6b5 6b6 7b2 7b3>;
         };
 
         clt: c_layer_tap {
@@ -173,7 +173,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <26 28 36 37 38 40 41>;
+            hold-trigger-key-positions = <4b7 4b9 6b4 6b5 6b6 7b2 7b3>;
         };
 
         vmt: v_macro_tap {
@@ -183,7 +183,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
             bindings = <&mcv>, <&kp>;
-            hold-trigger-key-positions = <26 27 36 37 38 40 41>;
+            hold-trigger-key-positions = <4b7 4b8 6b4 6b5 6b6 7b2 7b3>;
         };
     };
 
@@ -196,17 +196,17 @@
 
         combo_sys {
             timeout-ms = <LH_COMBO_TIMEOUT>;
-            key-positions = <1 2 3>;
+            key-positions = <1b6 1b7 1b8>;
             bindings = <&sl SYS>;
         };
         combo_standard {
             timeout-ms = <LH_COMBO_TIMEOUT>;
-            key-positions = <13 14 15>;
+            key-positions = <3b1 3b2 3b3>;
             bindings = <&to WIN>;
         };
         combo_game {
             timeout-ms = <LH_COMBO_TIMEOUT>;
-            key-positions = <25 26 27>;
+            key-positions = <4b6 4b7 4b8>;
             bindings = <&to GAM>;
         };
 
@@ -215,27 +215,27 @@
         // them during normal typing, even with a very long timeout.
         combo_tab {
             timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
-            key-positions = <4 17>;
+            key-positions = <1b9 3b5>;
             bindings = <&kp TAB>;
         };
         combo_esc {
             timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
-            key-positions = <16 17>;
+            key-positions = <3b4 3b5>;
             bindings = <&kp ESC>;
         };
         combo_quote {
             timeout-ms = <RH_COMBO_TIMEOUT>;
-            key-positions = <19 20>;
+            key-positions = <4b2 4b3>;
             bindings = <&kp QUOT>;
         };
         combo_caps {
             timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
-            key-positions = <30 31>;
+            key-positions = <5b6 5b7>;
             bindings = <&kp CAPS>;
         };
         combo_menu {
             timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
-            key-positions = <7 18>;
+            key-positions = <2b7 4b1>;
             bindings = <&kp K_CMENU>;
         };
     };
