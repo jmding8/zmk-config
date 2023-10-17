@@ -114,7 +114,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
             bindings = <&mcs>, <&kp>;
-            hold-trigger-key-positions = <33 34 64 65 66 72 73>;
+            hold-trigger-key-positions = <15 16 36 37 38 40 41>;
         };
 
         dlt: d_layer_tap {
@@ -124,7 +124,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <32 34 64 65 66 72 73>;
+            hold-trigger-key-positions = <14 16 36 37 38 40 41>;
         };
 
         fmt: f_macro_tap {
@@ -134,7 +134,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
             bindings = <&mcf>, <&kp>;
-            hold-trigger-key-positions = <32 33 64 65 66 72 73>;
+            hold-trigger-key-positions = <14 15 36 37 38 40 41>;
         };
 
         klt: k_layer_tap {
@@ -144,7 +144,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <RH_COMBO_TIMEOUT>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <44 64 65 66 72 73>;
+            hold-trigger-key-positions = <21 36 37 38 40 41>;
         };
         
         lmt: l_macro_tap {
@@ -154,7 +154,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <RH_COMBO_TIMEOUT>;
             bindings = <&mcl>, <&kp>;
-            hold-trigger-key-positions = <43 64 65 66 72 73>;
+            hold-trigger-key-positions = <20 36 37 38 40 41>;
         };
 
         xmt: x_macro_tap {
@@ -164,7 +164,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
             bindings = <&mcx>, <&kp>;
-            hold-trigger-key-positions = <48 49 64 65 66 72 73>;
+            hold-trigger-key-positions = <27 28 36 37 38 40 41>;
         };
 
         clt: c_layer_tap {
@@ -174,7 +174,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <47 49 64 65 66 72 73>;
+            hold-trigger-key-positions = <26 28 36 37 38 40 41>;
         };
 
         vmt: v_macro_tap {
@@ -184,7 +184,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <LH_COMBO_TIMEOUT>;
             bindings = <&mcv>, <&kp>;
-            hold-trigger-key-positions = <47 48 64 65 66 72 73>;
+            hold-trigger-key-positions = <26 27 36 37 38 40 41>;
         };
     };
 
@@ -197,17 +197,17 @@
 
         combo_sys {
             timeout-ms = <LH_COMBO_TIMEOUT>;
-            key-positions = <16 17 18>;
+            key-positions = <1 2 3>;
             bindings = <&sl SYS>;
         };
         combo_standard {
             timeout-ms = <LH_COMBO_TIMEOUT>;
-            key-positions = <31 32 33>;
+            key-positions = <13 14 15>;
             bindings = <&to WIN>;
         };
         combo_game {
             timeout-ms = <LH_COMBO_TIMEOUT>;
-            key-positions = <46 47 48>;
+            key-positions = <25 26 27>;
             bindings = <&to GAM>;
         };
 
@@ -216,27 +216,27 @@
         // them during normal typing, even with a very long timeout.
         combo_tab {
             timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
-            key-positions = <19 35>;
+            key-positions = <4 17>;
             bindings = <&kp TAB>;
         };
         combo_esc {
             timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
-            key-positions = <34 35>;
+            key-positions = <16 17>;
             bindings = <&kp ESC>;
         };
         combo_quote {
             timeout-ms = <RH_COMBO_TIMEOUT>;
-            key-positions = <42 43>;
+            key-positions = <19 20>;
             bindings = <&kp QUOT>;
         };
         combo_caps {
             timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
-            key-positions = <56 57>;
+            key-positions = <30 31>;
             bindings = <&kp CAPS>;
         };
         combo_menu {
             timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
-            key-positions = <27 41>;
+            key-positions = <7 18>;
             bindings = <&kp K_CMENU>;
         };
     };
@@ -246,145 +246,127 @@
 
         windows_layer {
             bindings = <
-&kp N1   &kp N2     &kp N3      &kp N4     &kp N5    &kp N6     &none   &none   &none   &none   &none     &kp N7    &kp N8      &kp N9     &kp N0    &kp BKSP
-&kp Q    &kp W      &kp E       &kp R      &kp T     &none      &none   &none   &none   &none   &kp Y     &kp U     &kp I       &kp O      &kp P
-&kp A    &smt S S   &dlt DL D   &fmt F F   &kp G     &none      &none   &none   &none   &none   &kp H     &kp J     &klt KL K   &lmt L L   &kp SCLN
-&kp Z    &xmt X X   &clt CL C   &vmt V V   &kp B     &none      &none   &none   &none   &none   &kp N     &kp M     &kp CMMA    &kp DOT    &kp FSLH
-&none    &none      &none       &kp LGUI   &kp LCTL  &kp LALT   &none   &none   &none   &none   &kp SPC   &mo NAV   &mo MED     &none      &none
+&none  &kp Q  &kp W     &kp E      &kp R     &kp T     /**/  &kp Y    &kp U    &kp I      &kp O     &kp P     &none
+&none  &kp A  &smt S S  &dlt DL D  &fmt F F  &kp G     /**/  &kp H    &kp J    &klt KL K  &lmt L L  &kp SCLN  &none
+&none  &kp Z  &xmt X X  &clt CL C  &vmt V V  &kp B     /**/  &kp N    &kp M    &kp CMMA   &kp DOT   &kp FSLH  &none
+                        &kp LGUI   &kp LALT  &kp LCTL  /**/  &kp SPC  &mo NAV  &mo MED
             >;
         };
         
         apple_layer {
             bindings = <
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &kp LCTL  &kp LGUI   &kp LALT  &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
+&trans  &trans  &trans  &trans    &trans    &trans    /**/  &trans   &trans   &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans    &trans    /**/  &trans   &trans   &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans    &trans    /**/  &trans   &trans   &trans   &trans  &trans  &trans
+                        &kp LCTL  &kp LALT  &kp LGUI  /**/  &kp SPC  &mo NAV  &mo MED
             >;
         };
 
-// game_layer is disabled (fully transparent) for now.
         game_layer {
             bindings = <
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
+&kp TAB   &kp Q  &kp W  &kp E     &kp R     &kp T     /**/  &kp Y    &kp U    &kp I     &kp O    &kp P     &kp BSLH
+&kp ESC   &kp A  &kp S  &kp D     &kp F     &kp G     /**/  &kp H    &kp J    &kp K     &kp L    &kp SCLN  &kp QUOT
+&kp LSFT  &kp Z  &kp X  &kp C     &kp V     &kp B     /**/  &kp N    &kp M    &kp CMMA  &kp DOT  &kp FSLH  &kp RSFT
+                        &kp GRAV  &kp LALT  &kp LCTL  /**/  &kp SPC  &mo NAV  &mo MED
             >;
         };
 
         num_layer {
             bindings = <
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &kp GRAV   &kp N7    &kp N8      &kp N9     &kp DOT
-&trans   &kp LSFT   &mo DL      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &kp EQL    &kp N4    &kp N5      &kp N6     &kp N0
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &kp MINUS  &kp N1    &kp N2      &kp N3     &kp FSLH
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-
+&trans  &trans  &trans    &trans  &trans  &trans  /**/  &kp GRAV   &kp N7  &kp N8  &kp N9  &kp DOT   &trans
+&trans  &trans  &kp LSFT  &mo DL  &trans  &trans  /**/  &kp EQL    &kp N4  &kp N5  &kp N6  &kp N0    &trans
+&trans  &trans  &trans    &trans  &trans  &trans  /**/  &kp MINUS  &kp N1  &kp N2  &kp N3  &kp FSLH  &trans
+                          &trans  &trans  &trans  /**/  &trans     &trans  &trans
             >;
         };
 
         function_layer {
             bindings = <
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &kp F12    &kp F7    &kp F8      &kp F9     &kp BSLH
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &kp F11    &kp F4    &kp F5      &kp F6     &kp LBKT
-&trans   &kp LSFT   &mo CL      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &kp F10    &kp F1    &kp F2      &kp F3     &kp RBKT
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-
+&trans  &trans  &trans    &trans  &trans   &trans  /**/  &kp F12  &kp F7  &kp F8  &kp F9  &kp BSLH  &trans
+&trans  &trans  &trans    &trans  &trans   &trans  /**/  &kp F11  &kp F4  &kp F5  &kp F6  &kp LBKT  &trans
+&trans  &trans  &kp LSFT  &mo CL  &trans   &trans  /**/  &kp F10  &kp F1  &kp F2  &kp F3  &kp RBKT  &trans
+                          &trans  &trans   &trans  /**/  &trans   &trans  &trans
             >;
         };
 
         nav_layer {
             bindings = <
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &kp UARW  &kp PGUP    &kp DEL    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &kp LARW   &kp DARW  &kp RARW    &kp BKSP   &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &kp PGDN   &kp HOME  &kp END     &kp RET    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &trans    &kp UARW  &kp PGUP  &kp DEL   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &kp LARW  &kp DARW  &kp RARW  &kp BKSP  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &kp PGDN  &kp HOME  &kp END   &kp RET   &trans
+                        &trans  &trans  &trans  /**/  &trans  &trans    &trans
             >;
         };
 
         media_layer {
             bindings = <
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans   &trans        &trans        &trans            &trans      &trans    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans   &trans        &kp C_VOL_UP  &trans            &kp PRSC    &trans
-&trans   &kp SLCK   &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans   &kp C_BRI_DN  &kp C_VOL_DN  &kp C_BRI_UP      &trans      &trans
-&trans   &trans     &trans    &trans &kp PAUSE_BREAK &trans    &trans  &trans  &trans  &kp INS  &kp C_MUTE    &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT  &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans   &trans        &trans        &trans            &trans      &trans
-
+&trans  &trans  &trans    &trans  &trans  &trans           /**/  &trans   &trans        &kp C_VOL_UP  &trans            &kp PRSC    &trans
+&trans  &trans  &kp SLCK  &trans  &trans  &trans           /**/  &trans   &kp C_BRI_DN  &kp C_VOL_DN  &kp C_BRI_UP      &trans      &trans
+&trans  &trans  &trans    &trans  &trans  &kp PAUSE_BREAK  /**/  &kp INS  &kp C_MUTE    &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT  &trans
+                          &trans  &trans  &trans           /**/  &trans   &trans        &trans
             >;
         };
 
         system_layer {
             bindings = <
-&bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3 &trans &trans &trans  &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
-&trans   &to WIN    &trans     &sys_reset &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&to APL &out OUT_USB  &trans  &bootloader &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &bt BT_CLR  &trans &out OUT_BLE  &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
+&trans  &trans   &to WIN       &trans        &trans        &trans        /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &to APL  &out OUT_USB  &trans        &trans        &trans        /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans   &trans        &bt BT_CLR    &trans        &out OUT_BLE  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+                               &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  /**/  &trans  &trans  &trans
             >;
         };
 
         d_key_layer {
             bindings = <
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &kp LSFT   &none       &mo NUM   &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
+&trans  &trans  &trans    &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LSFT  &none   &mo NUM  &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans   &trans  /**/  &trans  &trans  &trans
             >;
         };
 
         sf_key_layer {
             bindings = <
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &mo DL      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
+&trans  &trans  &trans  &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &mo DL  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans   &trans  /**/  &trans  &trans  &trans
             >;
         };
 
         k_key_layer {
             bindings = <
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &none       &kp RSFT   &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &trans  &none   &kp RSFT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &trans  &trans  &trans    &trans  &trans
+                        &trans  &trans  &trans  /**/  &trans  &trans  &trans
             >;
         };
 
         l_key_layer {
             bindings = <
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &mo KL      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
+&trans  &trans  &trans  &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &trans  /**/  &trans  &trans  &mo KL  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans   &trans  /**/  &trans  &trans  &trans
             >;
         };
 
         c_key_layer {
             bindings = <
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &kp LSFT   &none       &mo FUN   &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
+&trans  &trans  &trans    &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans  &trans   &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LSFT  &none   &mo FUN  &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans   &trans  /**/  &trans  &trans  &trans
             >;
         };
 
         xv_key_layer {
             bindings = <
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &mo CL      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &mo CL  &trans  &trans  /**/  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  /**/  &trans  &trans  &trans
             >;
         };
     };
