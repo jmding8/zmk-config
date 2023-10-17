@@ -21,3 +21,5 @@ include:
     shield: mercury-k_left
   - board: nice_nano_v2
     shield: mercury-k_right
+  - board: nice_nano_v2
+    shield: pome-76
