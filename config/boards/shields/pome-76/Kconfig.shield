@@ -1,5 +1,2 @@
-config SHIELD_MERCURY-U_LEFT
-	def_bool $(shields_list_contains,mercury-u_left)
-
-config SHIELD_MERCURY-U_RIGHT
-	def_bool $(shields_list_contains,mercury-u_right)
+config SHIELD_POME-76
+	def_bool $(shields_list_contains,pome-76)

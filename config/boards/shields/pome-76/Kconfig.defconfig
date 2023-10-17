@@ -1,16 +1,6 @@
-if SHIELD_MERCURY-U_LEFT
+if SHIELD_POME-76
 
 config ZMK_KEYBOARD_NAME
-	default "Mercury-U"
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
-
-endif
-
-if SHIELD_MERCURY-U_LEFT || SHIELD_MERCURY-U_RIGHT
-
-config ZMK_SPLIT
-	default y
+	default "Pome-76"
 
 endif
