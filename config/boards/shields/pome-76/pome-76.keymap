@@ -18,24 +18,7 @@
 #define CL  12
 #define XVL 13
 
-// 11Jul2022
-// still miss the X+C => Tab combo on rare occasions, increase timeout from 75 to 100
-// Sometimes with words like "talk", the rolled "lk" becomes RShift. Decrease timeout to 50.
-// #define FAST_COMBO_TIMEOUT 50
-// #define MED_COMBO_TIMEOUT 75
-// #define SLOW_COMBO_TIMEOUT 100
-
-// 21Jul2022
-// I accidentally trigger X+C => Tab combo when typing "Excel". This combo is too sensitive to timing.
-// Instead, I'll move Tab combo to R+F, and Esc combo to F+G. Since all of these keys are usually index
-// finger only, we can use very long timeouts for them.
-// #define RH_COMBO_TIMEOUT 50
-// #define LH_COMBO_TIMEOUT 75
-// #define SINGLE_FINGER_COMBO_TIMEOUT 150
-
-// 2Jan2023
-// The word "sounds" sometimes comes out as "soundSHIFT", so let's decrease timeout from 75 to 50 ms.
-// Also, can probably get away with increasing SINGLE_FINGER_COMBO_TIMEOUT from 150 to 200 ms.
+// See mercury-u.keymap for the history of these timeouts.
 #define RH_COMBO_TIMEOUT 50
 #define LH_COMBO_TIMEOUT 50
 #define SINGLE_FINGER_COMBO_TIMEOUT 200
