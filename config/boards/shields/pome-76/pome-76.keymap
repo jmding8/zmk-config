@@ -3,20 +3,21 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define WIN 0
-#define APL 1
-#define GAM 2
-#define NUM 3
-#define FUN 4
-#define NAV 5
-#define MED 6
-#define SYS 7
-#define DL  8
-#define SFL 9
-#define KL  10
-#define LL  11
-#define CL  12
-#define XVL 13
+// Layers ENUM
+#define WIN 0     // Windows
+#define APL 1     // Apple
+#define GAM 2     // Gaming
+#define NUM 3     // Numbers
+#define FUN 4     // Function (F-keys)
+#define NAV 5     // Navigation
+#define MED 6     // Media
+#define SYS 7     // System
+#define DL  8     // D-Layer
+#define SFL 9     // S/F-Layer
+#define KL  10    // K-Layer
+#define LL  11    // L-Layer
+#define CL  12    // C-Layer
+#define XVL 13    // X/V-Layer
 
 // See mercury-u.keymap for the history of these timeouts.
 #define RH_COMBO_TIMEOUT 50
