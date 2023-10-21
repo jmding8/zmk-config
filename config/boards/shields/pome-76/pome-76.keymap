@@ -247,7 +247,7 @@
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans        &trans        &trans
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans        &trans
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans
 &trans        &trans        &trans        &kp LCTL      &kp LGUI      &kp LALT      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans
             >;
         };
@@ -277,9 +277,9 @@
         function_layer {
             bindings = <
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans       &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F12       &kp F7        &kp F8        &kp F9       &kp BSLH
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F11       &kp F4        &kp F5        &kp F6       &kp LBKT
-&trans        &trans        &kp LSFT      &mo CL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F10       &kp F1         &kp F2       &kp F3       /* &kp RBKT */
+              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F12       &kp F7        &kp F8        &kp F9       &trans
+              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F11       &kp F4        &kp F5        &kp F6       &trans
+&trans        &trans        &kp LSFT      &mo CL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F10       &kp F1         &kp F2       &kp F3
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 
             >;
@@ -289,7 +289,7 @@
             bindings = <
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp UARW      &kp PGUP      &kp DEL
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp LARW      &kp DARW      &kp RARW      &kp BKSP
+              &trans        &kp LBKT      &kp RBKT      &kp BSLH      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp LARW      &kp DARW      &kp RARW      &kp BKSP
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp PGDN      &kp HOME      &kp END       &kp RET
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
