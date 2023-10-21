@@ -217,6 +217,11 @@
             key-positions = <56 57>; /* NM */
             bindings = <&kp CAPS>;
         };
+        combo_fwd_slash {
+            timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
+            key-positions = <58 59>; /* ,. */
+            bindings = <&kp FSLH>;
+        };
         combo_menu {
             timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
             key-positions = <27 41>; /* HU */
@@ -232,7 +237,7 @@
              &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6        &none         &none         &none         &none         &none         &kp N7        &kp N8        &kp N9        &kp N0        &kp BKSP
              &kp Q         &kp W         &kp E         &kp R         &kp T         &none         &none         &none         &none         &none         &kp Y         &kp U         &kp I         &kp O         &kp P
              &kp A         &smt S S      &dlt DL D     &fmt F F      &kp G         &none         &none         &none         &none         &none         &kp H         &kp J         &klt KL K     &lmt L L      &kp SCLN
-&none        &kp Z         &xmt X X      &clt CL C     &vmt V V      &kp B         &none         &none         &none         &none         &none         &kp N         &kp M         &kp CMMA      &kp DOT       /* &kp FSLH */
+&none        &kp Z         &xmt X X      &clt CL C     &vmt V V      &kp B         &none         &none         &none         &none         &none         &kp N         &kp M         &kp CMMA      &kp DOT
 &none        &none         &none         &kp LGUI      &kp LALT      &kp LCTL      &none         &none         &none         &none         &kp SPC       &mo NAV       &mo MED       &none         &none
             >;
         };
@@ -263,7 +268,7 @@
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp GRAV      &kp N7        &kp N8        &kp N9        &kp DOT
               &trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp EQL       &kp N4        &kp N5        &kp N6        &kp N0
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp MINUS     &kp N1        &kp N2        &kp N3        /* &kp FSLH */
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp MINUS     &kp N1        &kp N2        &kp N3
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 
             >;
