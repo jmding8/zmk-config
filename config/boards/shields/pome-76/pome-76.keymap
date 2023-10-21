@@ -263,7 +263,7 @@
 &trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
 &trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &kp GRAV   &kp N7    &kp N8      &kp N9     &kp DOT
 &trans   &kp LSFT   &mo DL      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &kp EQL    &kp N4    &kp N5      &kp N6     &kp N0
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &kp MINUS  &kp N1    &kp N2      &kp N3     /* &kp FSLH */
+&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &kp MINUS &kp N1      &kp N2     &kp N3     /* &kp FSLH */
 &trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
 
             >;
@@ -274,7 +274,7 @@
 &trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
 &trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &kp F12    &kp F7    &kp F8      &kp F9     &kp BSLH
 &trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &kp F11    &kp F4    &kp F5      &kp F6     &kp LBKT
-&trans   &trans     &kp LSFT    &mo CL    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &kp F10    &kp F1    &kp F2      &kp F3     /* &kp RBKT */
+&trans   &trans     &kp LSFT    &mo CL    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &kp F10   &kp F1      &kp F2     &kp F3     /* &kp RBKT */
 &trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
 
             >;
@@ -284,19 +284,19 @@
             bindings = <
 &trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans    &trans
 &trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &kp UARW  &kp PGUP    &kp DEL    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &kp LARW   &kp DARW  &kp RARW    &kp BKSP
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans     &kp PGDN   &kp HOME   &kp END     /* &kp RET */
+&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &kp LARW  &kp DARW    &kp RARW   &kp BKSP
+&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &kp PGDN    &kp HOME   &kp END     /* &kp RET */
 &trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans    &trans      &trans     &trans
             >;
         };
 
         media_layer {
             bindings = <
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans     &trans            &trans      &trans    &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans  &kp C_VOL_UP  &trans            &kp PRSC    &trans
-&trans   &kp SLCK   &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans  &kp C_BRI_DN  &kp C_VOL_DN    &kp C_BRI_UP  &trans
-&trans   &trans     &trans      &trans   &trans &kp PAUSE_BREAK &trans &trans  &trans  &trans  &trans     &kp INS    &kp C_MUTE        &trans      &trans
-&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans     &trans            &trans      &trans
+&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans    &trans     &trans      &trans       &trans    &trans
+&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans &kp C_VOL_UP  &trans      &kp PRSC     &trans
+&trans   &kp SLCK   &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans &kp C_BRI_DN &kp C_VOL_DN &kp C_BRI_UP &trans
+&trans   &trans     &trans      &trans   &trans &kp PAUSE_BREAK &trans &trans  &trans  &trans  &trans    &kp INS    &kp C_MUTE  &trans       &trans
+&trans   &trans     &trans      &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans    &trans     &trans      &trans       &trans
 
             >;
         };
