@@ -234,21 +234,21 @@
 
         windows_layer {
             bindings = <
-             &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6        &none         &none         &none         &none         &none         &kp N7        &kp N8        &kp N9        &kp N0        &kp BKSP
-             &kp Q         &kp W         &kp E         &kp R         &kp T         &none         &none         &none         &none         &none         &kp Y         &kp U         &kp I         &kp O         &kp P
-             &kp A         &smt S S      &dlt DL D     &fmt F F      &kp G         &none         &none         &none         &none         &none         &kp H         &kp J         &klt KL K     &lmt L L      &kp SCLN
-&none        &kp Z         &xmt X X      &clt CL C     &vmt V V      &kp B         &none         &none         &none         &none         &none         &kp N         &kp M         &kp CMMA      &kp DOT
-&none        &none         &none         &kp LGUI      &kp LALT      &kp LCTL      &none         &none         &none         &none         &kp SPC       &mo NAV       &mo MED       &none         &none
+              &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6        &none         &none         &none         &none         &none         &kp N7        &kp N8        &kp N9        &kp N0        &kp BKSP
+              &kp Q         &kp W         &kp E         &kp R         &kp T         &none         &none         &none         &none         &none         &kp Y         &kp U         &kp I         &kp O         &kp P
+              &kp A         &smt S S      &dlt DL D     &fmt F F      &kp G         &none         &none         &none         &none         &none         &kp H         &kp J         &klt KL K     &lmt L L      &kp SCLN
+&none         &kp Z         &xmt X X      &clt CL C     &vmt V V      &kp B         &none         &none         &none         &none         &none         &kp N         &kp M         &kp CMMA      &kp DOT
+&none         &none         &none         &kp LGUI      &kp LALT      &kp LCTL      &none         &none         &none         &none         &kp SPC       &mo NAV       &mo MED       &none         &none
             >;
         };
         
         apple_layer {
             bindings = <
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans
-&trans        &trans        &trans        &kp LCTL      &kp LGUI      &kp LALT      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans         &trans
+              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &kp LCTL      &kp LGUI      &kp LALT      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
 
@@ -276,9 +276,9 @@
 
         function_layer {
             bindings = <
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans       &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F12       &kp F7        &kp F8        &kp F9       &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F11       &kp F4        &kp F5        &kp F6       &trans
+              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F12       &kp F7        &kp F8        &kp F9        &trans
+              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F11       &kp F4        &kp F5        &kp F6        &trans
 &trans        &trans        &kp LSFT      &mo CL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F10       &kp F1         &kp F2       &kp F3
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 
