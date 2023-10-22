@@ -292,7 +292,7 @@
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
               &trans        &kp LBKT      &kp RBKT      &kp BSLH      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp UARW      &kp PGUP      &kp DEL
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp LARW      &kp DARW      &kp RARW      &kp BKSP
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp PGDN      &kp HOME      &kp END       &kp RET
+&trans        &trans        &kp LBRC      &kp RBRC      &kp PIPE      &trans        &trans        &trans        &trans        &trans        &trans        &kp PGDN      &kp HOME      &kp END       &kp RET
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
