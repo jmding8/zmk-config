@@ -20,8 +20,7 @@
 #define XVL 13    // X/V-Layer
 
 // See mercury-u.keymap for the history of these timeouts.
-#define RH_COMBO_TIMEOUT 50
-#define LH_COMBO_TIMEOUT 50
+#define FAST_COMBO_TIMEOUT 50
 #define SINGLE_FINGER_COMBO_TIMEOUT 200
 
 / {
@@ -95,7 +94,7 @@
             label = "S_MACRO_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <LH_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mcs>, <&kp>;
             hold-trigger-key-positions = <33 34 64 65 66 72 73>;
         };
@@ -105,7 +104,7 @@
             label = "D_LAYER_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <LH_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <32 34 64 65 66 72 73>;
         };
@@ -115,7 +114,7 @@
             label = "F_MACRO_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <LH_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mcf>, <&kp>;
             hold-trigger-key-positions = <32 33 64 65 66 72 73>;
         };
@@ -125,7 +124,7 @@
             label = "K_LAYER_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <RH_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <44 64 65 66 72 73>;
         };
@@ -135,7 +134,7 @@
             label = "L_MACRO_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <RH_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mcl>, <&kp>;
             hold-trigger-key-positions = <43 64 65 66 72 73>;
         };
@@ -145,7 +144,7 @@
             label = "X_MACRO_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <LH_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mcx>, <&kp>;
             hold-trigger-key-positions = <48 49 64 65 66 72 73>;
         };
@@ -155,7 +154,7 @@
             label = "C_LAYER_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <LH_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <47 49 64 65 66 72 73>;
         };
@@ -165,7 +164,7 @@
             label = "V_MACRO_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <LH_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mcv>, <&kp>;
             hold-trigger-key-positions = <47 48 64 65 66 72 73>;
         };
@@ -179,17 +178,17 @@
         compatible = "zmk,combos";
 
         combo_sys {
-            timeout-ms = <LH_COMBO_TIMEOUT>;
+            timeout-ms = <FAST_COMBO_TIMEOUT>;
             key-positions = <16 17 18>;
             bindings = <&sl SYS>;
         };
         combo_standard {
-            timeout-ms = <LH_COMBO_TIMEOUT>;
+            timeout-ms = <FAST_COMBO_TIMEOUT>;
             key-positions = <31 32 33>;
             bindings = <&to WIN>;
         };
         combo_game {
-            timeout-ms = <LH_COMBO_TIMEOUT>;
+            timeout-ms = <FAST_COMBO_TIMEOUT>;
             key-positions = <46 47 48>;
             bindings = <&to GAM>;
         };
@@ -208,7 +207,7 @@
             bindings = <&kp ESC>;
         };
         combo_quote {
-            timeout-ms = <RH_COMBO_TIMEOUT>;
+            timeout-ms = <FAST_COMBO_TIMEOUT>;
             key-positions = <42 43>; /* JK */
             bindings = <&kp QUOT>;
         };
