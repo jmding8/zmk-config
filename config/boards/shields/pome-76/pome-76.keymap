@@ -19,6 +19,7 @@
 #define CL  12    // C-Layer
 #define XVL 13    // X/V-Layer
 
+// See mercury-u.keymap for a history of what timeout values have been tried.
 // This timeout should be mostly reserved for combos on keys that would typically be pressed
 // by the same finger (H+J for example), as it is a very, very long and lenient timeout.
 #define SLOW_COMBO_TIMEOUT 200
