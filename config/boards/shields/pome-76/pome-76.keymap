@@ -220,7 +220,8 @@
         };
         combo_fwd_slash {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
-            key-positions = <27 41>; /* HU */
+            // HU is a little hard to reach */
+            key-positions = <59 60>; /* ,. */
             bindings = <&kp FSLH>;
         };
         combo_menu {
