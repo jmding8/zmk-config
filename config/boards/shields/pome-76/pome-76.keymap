@@ -176,7 +176,6 @@
     sl {
         release-after-ms = <20000>; // 20 seconds
     };
-
     combos {
         compatible = "zmk,combos";
 
@@ -236,11 +235,11 @@
 
         windows_layer {
             bindings = <
-              &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6        &none         &none         &kp MINUS     &kp EQL       &kp GRAV      &kp N7        &kp N8        &kp N9        &kp N0        &kp BKSP
+              &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6        &kp GRAV      &none         &none         &kp GRAV      &kp N7        &kp N8        &kp N9        &kp N0        &kp MINUS     &kp EQL
               &kp Q         &kp W         &kp E         &kp R         &kp T         &kp F9        &kp F10       &kp F11       &kp F12       &kp LBKT      &kp Y         &kp U         &kp I         &kp O         &kp P
               &kp A         &smt S S      &dlt DL D     &fmt F F      &kp G         &kp F5        &kp F6        &kp F7        &kp F8        &kp RBKT      &kp H         &kp J         &klt KL K     &lmt L L      &kp SCLN
-&kp LSFT      &kp Z         &xmt X X      &clt CL C     &vmt V V      &kp B         &kp F1        &kp F2        &kp F3        &kp F4        &kp FSLH      &kp N         &kp M         &kp CMMA      &kp DOT
-&kp ESC       &kp DEL       &none         &kp LGUI      &kp LCTL      &kp LALT      &none         &none         &none         &none         &kp SPC       &mo NAV       &mo MED       &none         &kp RET
+&kp LSFT      &kp Z         &xmt X X      &clt CL C     &vmt V V      &kp B         &kp F1        &kp F2        &kp F3        &kp F4        &kp BSLHg      &kp N         &kp M         &kp CMMA      &kp DOT
+&kp ESC       &kp DEL       &none         &kp LGUI      &kp LCTL      &kp LALT      &none         &none         &none         &none         &kp SPC       &mo NAV       &mo MED       &kp BKSP      &kp RET
             >;
         };
         
@@ -290,9 +289,9 @@
         nav_layer {
             bindings = <
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &kp LBKT      &kp RBKT      &kp BSLH      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp UARW      &kp PGUP      &kp DEL
+              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp UARW      &kp PGUP      &kp DEL
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp LARW      &kp DARW      &kp RARW      &kp BKSP
-&trans        &trans        &kp LBRC      &kp RBRC      &kp PIPE      &trans        &trans        &trans        &trans        &trans        &trans        &kp PGDN      &kp HOME      &kp END       &kp RET
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp PGDN      &kp HOME      &kp END       &kp RET
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
