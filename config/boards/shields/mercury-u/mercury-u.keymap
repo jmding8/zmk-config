@@ -234,9 +234,14 @@
             key-positions = <30 31>;
             bindings = <&kp CAPS>;
         };
+        combo_fwd_slash {
+            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            key-positions = <7 18>; /* HU */
+            bindings = <&kp FSLH>;
+        };
         combo_menu {
             timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
-            key-positions = <7 18>;
+            key-positions = <18 19>; /* HJ */
             bindings = <&kp K_CMENU>;
         };
     };
@@ -249,7 +254,7 @@
 &none  &kp Q  &kp W     &kp E      &kp R     &kp T     /**/  &kp Y    &kp U    &kp I      &kp O     &kp P     &none
 &none  &kp A  &smt S S  &dlt DL D  &fmt F F  &kp G     /**/  &kp H    &kp J    &klt KL K  &lmt L L  &kp SCLN  &none
 &none  &kp Z  &xmt X X  &clt CL C  &vmt V V  &kp B     /**/  &kp N    &kp M    &kp CMMA   &kp DOT   &kp FSLH  &none
-                        &kp LGUI   &kp LALT  &kp LCTL  /**/  &kp SPC  &mo NAV  &mo MED
+                        &kp LGUI   &kp LCTL  &kp LALT  /**/  &kp SPC  &mo NAV  &mo MED
             >;
         };
         
@@ -291,10 +296,10 @@
 
         nav_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &trans    &kp UARW  &kp PGUP  &kp DEL   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &kp LARW  &kp DARW  &kp RARW  &kp BKSP  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans  &kp PGDN  &kp HOME  &kp END   &kp RET   &trans
-                        &trans  &trans  &trans  /**/  &trans  &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans    &trans    &kp UARW  &kp PGUP  &kp DEL   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &trans    &kp LARW  &kp DARW  &kp RARW  &kp BKSP  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  /**/  &kp PGDN  &kp HOME  &kp END   &kp RET   &trans    &trans
+                        &trans  &trans  &trans  /**/  &trans    &trans    &trans
             >;
         };
 
@@ -302,7 +307,7 @@
             bindings = <
 &trans  &trans  &trans    &trans  &trans  &trans           /**/  &trans   &trans        &kp C_VOL_UP  &trans            &kp PRSC    &trans
 &trans  &trans  &kp SLCK  &trans  &trans  &trans           /**/  &trans   &kp C_BRI_DN  &kp C_VOL_DN  &kp C_BRI_UP      &trans      &trans
-&trans  &trans  &trans    &trans  &trans  &kp PAUSE_BREAK  /**/  &kp INS  &kp C_MUTE    &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT  &trans
+&trans  &trans  &trans    &trans  &trans  &kp PAUSE_BREAK  /**/  &kp INS  &kp C_MUTE    &trans        &trans            &trans      &trans
                           &trans  &trans  &trans           /**/  &trans   &trans        &trans
             >;
         };
