@@ -235,7 +235,7 @@
             bindings = <&kp CAPS>;
         };
         combo_fwd_slash {
-            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            timeout-ms = <SINGLE_FINGER_COMBO_TIMEOUT>;
             key-positions = <7 18>; /* HU */
             bindings = <&kp FSLH>;
         };
