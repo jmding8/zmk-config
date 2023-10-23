@@ -226,7 +226,7 @@
         };
         combo_menu {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
-            key-positions = <41 42>; /* HJ */
+            key-positions = <27 41>; /* UH */
             bindings = <&kp K_CMENU>;
         };
     };
