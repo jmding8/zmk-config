@@ -218,6 +218,11 @@
             key-positions = <42 43>; /* JK */
             bindings = <&kp QUOT>;
         };
+        combo_quote_2 {
+            timeout-ms = <FAST_COMBO_TIMEOUT>;
+            key-positions = <44 45>; /* L; */
+            bindings = <&kp QUOT>;
+        };
         combo_caps {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <57 58>; /* NM */
