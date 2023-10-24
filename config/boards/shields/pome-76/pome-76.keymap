@@ -245,7 +245,7 @@
               &kp Q         &kp W         &kp E         &kp R         &kp T         &kp F9        &kp F10       &kp F11       &kp F12       &kp RBKT      &kp Y         &kp U         &kp I         &kp O         &kp P
               &kp A         &smt S S      &dlt DL D     &fmt F F      &kp G         &kp F5        &kp F6        &kp F7        &kp F8        &kp LBKT      &kp H         &kp J         &klt KL K     &lmt L L      &kp SCLN
 &kp LSFT      &kp Z         &xmt X X      &clt CL C     &vmt V V      &kp B         &kp F1        &kp F2        &kp F3        &kp F4        &kp BSLH      &kp N         &kp M         &kp CMMA      &kp DOT
-&kp ESC       &kp DEL       &none         &kp LGUI      &kp LALT      &kp LCTL      &none         &none         &none         &none         &kp SPC       &mo NAV       &mo MED       &kp BKSP      &kp RET
+&kp ESC       &kp DEL       &kp LGUI      &kp LALT      &kp LCTL      &none         &none         &none         &none         &none         &kp SPC       &mo NAV       &mo MED       &kp BKSP      &kp RET
             >;
         };
         
