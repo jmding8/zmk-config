@@ -203,9 +203,19 @@
             key-positions = <19 35>; /* RG */
             bindings = <&kp TAB>;
         };
+        combo_tab_2 {
+            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            key-positions = <34 42>; /* FJ */
+            bindings = <&kp TAB>;
+        };
         combo_esc {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <34 35>; /* FG */
+            bindings = <&kp ESC>;
+        };
+        combo_esc_2 {
+            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            key-positions = <33 43>; /* DK */
             bindings = <&kp ESC>;
         };
         combo_quote {
@@ -216,11 +226,6 @@
         combo_caps {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <57 58>; /* NM */
-            bindings = <&kp CAPS>;
-        };
-        combo_caps_2 {
-            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
-            key-positions = <33 43>; /* DK */
             bindings = <&kp CAPS>;
         };
         combo_fwd_slash {
