@@ -23,7 +23,8 @@
 // This timeout should be mostly reserved for combos on keys that would typically be pressed
 // by the same finger (H+J for example), as it is a very, very long and lenient timeout.
 #define SLOW_COMBO_TIMEOUT 200
-#define MEDIUM_COMBO_TIMEOUT 125
+// #define MEDIUM_COMBO_TIMEOUT 125
+#define MEDIUM_COMBO_TIMEOUT 80
 #define FAST_COMBO_TIMEOUT 50
 
 / {
@@ -92,6 +93,10 @@
     };
 
     behaviors {
+        // 63, 64, 65, and 66 are left hand modifier keys
+        // 72 and 73 and right hand layer keys
+        // 32 is S
+        // 43 is K
         smt: s_macro_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "S_MACRO_TAP";
@@ -99,7 +104,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mcs>, <&kp>;
-            hold-trigger-key-positions = <33 34 64 65 66 72 73>;
+            hold-trigger-key-positions = <33 34 63 64 65 66 72 73>;
         };
 
         dlt: d_layer_tap {
@@ -109,7 +114,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <32 34 64 65 66 72 73>;
+            hold-trigger-key-positions = <32 34 63 64 65 66 72 73>;
         };
 
         fmt: f_macro_tap {
@@ -119,7 +124,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mcf>, <&kp>;
-            hold-trigger-key-positions = <32 33 64 65 66 72 73>;
+            hold-trigger-key-positions = <32 33 63 64 65 66 72 73>;
         };
 
         klt: k_layer_tap {
@@ -129,7 +134,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <44 64 65 66 72 73>;
+            hold-trigger-key-positions = <44 63 64 65 66 72 73>;
         };
         
         lmt: l_macro_tap {
@@ -139,7 +144,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mcl>, <&kp>;
-            hold-trigger-key-positions = <43 64 65 66 72 73>;
+            hold-trigger-key-positions = <43 63 64 65 66 72 73>;
         };
 
         xmt: x_macro_tap {
@@ -149,7 +154,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mcx>, <&kp>;
-            hold-trigger-key-positions = <49 50 64 65 66 72 73>;
+            hold-trigger-key-positions = <49 50 63 64 65 66 72 73>;
         };
 
         clt: c_layer_tap {
@@ -159,7 +164,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <48 50 64 65 66 72 73>;
+            hold-trigger-key-positions = <48 50 63 64 65 66 72 73>;
         };
 
         vmt: v_macro_tap {
@@ -169,7 +174,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_COMBO_TIMEOUT>;
             bindings = <&mcv>, <&kp>;
-            hold-trigger-key-positions = <48 49 64 65 66 72 73>;
+            hold-trigger-key-positions = <48 49 63 64 65 66 72 73>;
         };
     };
 
@@ -203,19 +208,9 @@
             key-positions = <19 35>; /* RG */
             bindings = <&kp TAB>;
         };
-        combo_tab_2 {
-            timeout-ms = <SLOW_COMBO_TIMEOUT>;
-            key-positions = <34 42>; /* FJ */
-            bindings = <&kp TAB>;
-        };
         combo_esc {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <34 35>; /* FG */
-            bindings = <&kp ESC>;
-        };
-        combo_esc_2 {
-            timeout-ms = <SLOW_COMBO_TIMEOUT>;
-            key-positions = <33 43>; /* DK */
             bindings = <&kp ESC>;
         };
         combo_quote {
