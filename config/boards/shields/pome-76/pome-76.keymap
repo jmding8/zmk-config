@@ -229,7 +229,7 @@
             bindings = <&kp CAPS>;
         };
         combo_fwd_slash {
-            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            timeout-ms = <FAST_COMBO_TIMEOUT>;
             // HU is a little hard to reach */
             key-positions = <59 60>; /* ,. */
             bindings = <&kp FSLH>;
