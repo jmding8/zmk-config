@@ -19,13 +19,17 @@
 #define CL  12    // C-Layer
 #define XVL 13    // X/V-Layer
 
-// See mercury-u.keymap for a history of what timeout values have been tried.
-// This timeout should be mostly reserved for combos on keys that would typically be pressed
-// by the same finger (H+J for example), as it is a very, very long and lenient timeout.
-#define SLOW_COMBO_TIMEOUT 200
+// See mercury-u.keymap for the early history of timeout values.
+// 12Nov2023
+// The word "sounds" still rarely comes out as "soundSHIFT", so let's decrease timeout from 50 ms to 35ms.
+#define FAST_COMBO_TIMEOUT 35
+
 // #define MEDIUM_COMBO_TIMEOUT 125
 #define MEDIUM_COMBO_TIMEOUT 80
-#define FAST_COMBO_TIMEOUT 50
+
+// SLOW_COMBO_TIMEOUT is a very, very long and lenient timeout, and should be mostly only used for combos
+// involving keys that are pressed by the same finger (H & J for example).
+#define SLOW_COMBO_TIMEOUT 200
 
 / {
     behaviors {};
