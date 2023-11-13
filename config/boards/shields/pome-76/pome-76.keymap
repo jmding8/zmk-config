@@ -21,8 +21,9 @@
 
 // See mercury-u.keymap for the early history of timeout values.
 // 12Nov2023
-// The word "sounds" still rarely comes out as "soundSHIFT", so let's decrease timeout from 50 ms to 35ms.
-#define FAST_COMBO_TIMEOUT 35
+// The word "sounds" still rarely comes out as "soundSHIFT", so let's decrease timeout from 50ms to 35ms.
+//#define FAST_COMBO_TIMEOUT 35
+#define FAST_COMBO_TIMEOUT 1000 // for testing purposes only, extend this to a long time.
 
 // #define MEDIUM_COMBO_TIMEOUT 125
 #define MEDIUM_COMBO_TIMEOUT 80
