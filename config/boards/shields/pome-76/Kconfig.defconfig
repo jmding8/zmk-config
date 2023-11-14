@@ -1,6 +1,6 @@
-if SHIELD_POME-76
+if SHIELD_POME76-U
 
 config ZMK_KEYBOARD_NAME
-	default "Pome-76"
+	default "pome76-u"
 
 endif
