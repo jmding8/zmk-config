@@ -47,6 +47,19 @@
                 ;
         };
 
+        mcsf: macro_shift_f13 {
+            label = "MACRO_SHIFT_F13";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&macro_press &kp LSFT &kp F13>
+                , <&macro_release &kp F13>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp LSFT>
+                ;
+        };
+
         mcf: macro_f {
             label = "MACRO_F";
             compatible = "zmk,behavior-macro";
@@ -336,7 +349,7 @@
             bindings = <
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &kp LSFT      &none         &mo NUM       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+              &trans        &mcsf         &none         &mo NUM       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
