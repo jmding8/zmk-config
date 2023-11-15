@@ -116,9 +116,8 @@
             label = "D_LAYER_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
+            tapping-term-ms = <1000>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <32 34 63 64 65 66 72 73>;
         };
 
         fmt: f_macro_tap {
