@@ -1,0 +1,6 @@
+if SHIELD_POME76-K
+
+config ZMK_KEYBOARD_NAME
+	default "pome76-k"
+
+endif
