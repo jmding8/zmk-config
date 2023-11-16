@@ -193,17 +193,7 @@
             key-positions = <16 17 18>;
             bindings = <&sl SYS>;
         };
-        combo_standard {
-            timeout-ms = <FAST_COMBO_TIMEOUT>;
-            key-positions = <31 32 33>;
-            bindings = <&to WIN>;
-        };
-        combo_game {
-            timeout-ms = <FAST_COMBO_TIMEOUT>;
-            key-positions = <46 47 48>;
-            bindings = <&to GAM>;
-        };
-
+        
         // Slow combos: these combos exclusively use keys controlled by a single index-finger,
         // which makes them very unlikely to be accidentally triggered by a standard touch-typist
         // them during normal typing, even with a very long timeout.
