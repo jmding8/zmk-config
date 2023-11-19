@@ -18,6 +18,7 @@
 #define LL  11    // L-Layer
 #define CL  12    // C-Layer
 #define XVL 13    // X/V-Layer
+#define BKL 14    // Bracket-Layer
 
 // See mercury-u.keymap for the early history of timeout values.
 // 12Nov2023
@@ -233,6 +234,13 @@
             key-positions = <27 41>; /* UH */
             bindings = <&kp K_CMENU>;
         };
+
+        // Experimental.
+        combo_bracket_layer {
+            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            key-positions = <71 72>; /* Space Nav-Layer */
+            bindings = <&mo BKL>;
+        }
     };
 
     keymap {
@@ -378,6 +386,16 @@
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
               &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &mo CL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+            >;
+        };
+
+        bracket_layer {
+            bindings = <
+              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp BSLH      &kp LBKT      &kp RBKT      &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
