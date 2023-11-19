@@ -240,7 +240,7 @@
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <71 72>; /* Space Nav-Layer */
             bindings = <&mo BKL>;
-        }
+        };
     };
 
     keymap {
