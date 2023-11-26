@@ -207,31 +207,42 @@
             key-positions = <34 35>; /* FG */
             bindings = <&kp ESC>;
         };
-        combo_quote {
-            timeout-ms = <FAST_COMBO_TIMEOUT>;
-            key-positions = <42 43>; /* JK */
-            bindings = <&kp QUOT>;
-        };
-        combo_quote_2 {
-            timeout-ms = <FAST_COMBO_TIMEOUT>;
-            key-positions = <44 45>; /* L; */
-            bindings = <&kp QUOT>;
-        };
         combo_caps {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <57 58>; /* NM */
             bindings = <&kp CAPS>;
         };
-        combo_fwd_slash {
-            timeout-ms = <FAST_COMBO_TIMEOUT>;
-            // HU is a little hard to reach */
-            key-positions = <59 60>; /* ,. */
-            bindings = <&kp FSLH>;
-        };
         combo_menu {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <27 41>; /* UH */
             bindings = <&kp K_CMENU>;
+        };
+
+        // Space combos
+        combo_lbkt {
+            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            key-positions = <28 71>; /* I Space */
+            bindings = <&kp LBKT>;
+        };
+        combo_rbkt {
+            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            key-positions = <29 71>; /* O Space */
+            bindings = <&kp RBKT>;
+        };
+        combo_blsh {
+            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            key-positions = <30 71>; /* P Space */
+            bindings = <&kp BSLH>;
+        };
+        combo_quot {
+            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            key-positions = <45 71>; /* Semicolon Space */
+            bindings = <&kp QUOT>;
+        };
+        combo_flsh {
+            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            key-positions = <60 71>; /* Dot Space */
+            bindings = <&kp FSLH>;
         };
     };
 
