@@ -220,27 +220,27 @@
         // NavLayerKey combos
         combo_lbkt {
             timeout-ms = <NAV_LAYER_KEY_COMBO_TIMEOUT>;
-            key-positions = <28 70>; /* I NavLayerKey */
+            key-positions = <28 72>; /* I NavLayerKey */
             bindings = <&kp LBKT>;
         };
         combo_rbkt {
             timeout-ms = <NAV_LAYER_KEY_COMBO_TIMEOUT>;
-            key-positions = <29 70>; /* O NavLayerKey */
+            key-positions = <29 72>; /* O NavLayerKey */
             bindings = <&kp RBKT>;
         };
         combo_blsh {
             timeout-ms = <NAV_LAYER_KEY_COMBO_TIMEOUT>;
-            key-positions = <30 70>; /* P NavLayerKey */
+            key-positions = <30 72>; /* P NavLayerKey */
             bindings = <&kp BSLH>;
         };
         combo_quot {
             timeout-ms = <NAV_LAYER_KEY_COMBO_TIMEOUT>;
-            key-positions = <45 70>; /* Semicolon NavLayerKey */
+            key-positions = <45 72>; /* Semicolon NavLayerKey */
             bindings = <&kp QUOT>;
         };
         combo_flsh {
             timeout-ms = <NAV_LAYER_KEY_COMBO_TIMEOUT>;
-            key-positions = <60 70>; /* Dot NavLayerKey */
+            key-positions = <60 72>; /* Dot NavLayerKey */
             bindings = <&kp FSLH>;
         };
     };
