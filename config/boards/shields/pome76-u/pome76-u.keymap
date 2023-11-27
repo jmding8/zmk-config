@@ -24,8 +24,7 @@
 // The word "sounds" still rarely comes out as "soundSHIFT", so let's decrease timeout from 50 ms to 35ms.
 #define FAST_COMBO_TIMEOUT 35
 
-// #define MEDIUM_COMBO_TIMEOUT 125
-#define MEDIUM_COMBO_TIMEOUT 80
+#define NAV_LAYER_KEY_COMBO_TIMEOUT 80
 
 // SLOW_COMBO_TIMEOUT is a very, very long and lenient timeout, and should be mostly only used for combos
 // involving keys that are pressed by the same finger (H & J for example).
@@ -207,31 +206,42 @@
             key-positions = <34 35>; /* FG */
             bindings = <&kp ESC>;
         };
-        combo_quote {
-            timeout-ms = <FAST_COMBO_TIMEOUT>;
-            key-positions = <42 43>; /* JK */
-            bindings = <&kp QUOT>;
-        };
-        combo_quote_2 {
-            timeout-ms = <FAST_COMBO_TIMEOUT>;
-            key-positions = <44 45>; /* L; */
-            bindings = <&kp QUOT>;
-        };
         combo_caps {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <57 58>; /* NM */
             bindings = <&kp CAPS>;
         };
-        combo_fwd_slash {
-            timeout-ms = <FAST_COMBO_TIMEOUT>;
-            // HU is a little hard to reach */
-            key-positions = <59 60>; /* ,. */
-            bindings = <&kp FSLH>;
-        };
         combo_menu {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <27 41>; /* UH */
             bindings = <&kp K_CMENU>;
+        };
+
+        // NavLayerKey combos
+        combo_lbkt {
+            timeout-ms = <NAV_LAYER_KEY_COMBO_TIMEOUT>;
+            key-positions = <28 70>; /* I NavLayerKey */
+            bindings = <&kp LBKT>;
+        };
+        combo_rbkt {
+            timeout-ms = <NAV_LAYER_KEY_COMBO_TIMEOUT>;
+            key-positions = <29 70>; /* O NavLayerKey */
+            bindings = <&kp RBKT>;
+        };
+        combo_blsh {
+            timeout-ms = <NAV_LAYER_KEY_COMBO_TIMEOUT>;
+            key-positions = <30 70>; /* P NavLayerKey */
+            bindings = <&kp BSLH>;
+        };
+        combo_quot {
+            timeout-ms = <NAV_LAYER_KEY_COMBO_TIMEOUT>;
+            key-positions = <45 70>; /* Semicolon NavLayerKey */
+            bindings = <&kp QUOT>;
+        };
+        combo_flsh {
+            timeout-ms = <NAV_LAYER_KEY_COMBO_TIMEOUT>;
+            key-positions = <60 70>; /* Dot NavLayerKey */
+            bindings = <&kp FSLH>;
         };
     };
 
