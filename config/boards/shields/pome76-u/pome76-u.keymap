@@ -24,10 +24,10 @@
 // The word "sounds" still rarely comes out as "soundSHIFT", so let's decrease timeout from 50 ms to 35ms.
 #define FAST_COMBO_TIMEOUT 35
 
-// 27Nov2023
-// Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
-// #define MEDIUM_COMBO_TIMEOUT 80
-#define MEDIUM_COMBO_TIMEOUT 60
+
+// #define SPACE_COMBO_TIMEOUT 80 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
+// #define SPACE_COMBO_TIMEOUT 60 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
+#define SPACE_COMBO_TIMEOUT 35
 
 // SLOW_COMBO_TIMEOUT is a very, very long and lenient timeout, and should be mostly only used for combos
 // involving keys that are pressed by the same finger (H & J for example).
@@ -222,27 +222,27 @@
 
         // Space combos
         combo_lbkt {
-            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            timeout-ms = <SPACE_COMBO_TIMEOUT>;
             key-positions = <28 71>; /* I Space */
             bindings = <&kp LBKT>;
         };
         combo_rbkt {
-            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            timeout-ms = <SPACE_COMBO_TIMEOUT>;
             key-positions = <29 71>; /* O Space */
             bindings = <&kp RBKT>;
         };
         combo_blsh {
-            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            timeout-ms = <SPACE_COMBO_TIMEOUT>;
             key-positions = <30 71>; /* P Space */
             bindings = <&kp BSLH>;
         };
         combo_quot {
-            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            timeout-ms = <SPACE_COMBO_TIMEOUT>;
             key-positions = <45 71>; /* Semicolon Space */
             bindings = <&kp QUOT>;
         };
         combo_flsh {
-            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            timeout-ms = <SPACE_COMBO_TIMEOUT>;
             key-positions = <60 71>; /* Dot Space */
             bindings = <&kp FSLH>;
         };
