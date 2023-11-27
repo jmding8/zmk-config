@@ -24,8 +24,10 @@
 // The word "sounds" still rarely comes out as "soundSHIFT", so let's decrease timeout from 50 ms to 35ms.
 #define FAST_COMBO_TIMEOUT 35
 
-// #define MEDIUM_COMBO_TIMEOUT 125
-#define MEDIUM_COMBO_TIMEOUT 80
+// 27Nov2023
+// Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
+// #define MEDIUM_COMBO_TIMEOUT 80
+#define MEDIUM_COMBO_TIMEOUT 60
 
 // SLOW_COMBO_TIMEOUT is a very, very long and lenient timeout, and should be mostly only used for combos
 // involving keys that are pressed by the same finger (H & J for example).
