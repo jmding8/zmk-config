@@ -25,7 +25,8 @@
 #define FAST_COMBO_TIMEOUT 35
 
 // #define NAV_LAYER_KEY_COMBO_TIMEOUT 80 // 27Nov2018 too long, accidentally triggering combo when trying to activate nav layer
-#define NAV_LAYER_KEY_COMBO_TIMEOUT 35
+// #define NAV_LAYER_KEY_COMBO_TIMEOUT 35 // 27Nov2018 too long, accidentally triggering combo when trying to activate nav layer
+#define NAV_LAYER_KEY_COMBO_TIMEOUT 25
 
 // SLOW_COMBO_TIMEOUT is a very, very long and lenient timeout, and should be mostly only used for combos
 // involving keys that are pressed by the same finger (H & J for example).
