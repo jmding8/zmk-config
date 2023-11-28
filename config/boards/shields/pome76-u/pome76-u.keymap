@@ -19,11 +19,9 @@
 #define CL  12    // C-Layer
 #define XVL 13    // X/V-Layer
 
-// See mercury-u.keymap for the early history of timeout values.
-// 12Nov2023
-// The word "sounds" still rarely comes out as "soundSHIFT", so let's decrease timeout from 50 ms to 35ms.
+// See mercury-u.keymap for the early history of FAST_COMBO_TIMEOUT values.
+// 12Nov2023: The word "sounds" still rarely comes out as "soundSHIFT", so let's decrease timeout from 50 ms to 35ms.
 #define FAST_COMBO_TIMEOUT 35
-
 
 // #define SPACE_COMBO_TIMEOUT 80 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
 // #define SPACE_COMBO_TIMEOUT 60 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
@@ -246,7 +244,7 @@
             bindings = <&kp FSLH>;
         };
         combo_caps {
-            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            timeout-ms = <SPACE_COMBO_TIMEOUT>;
             key-positions = <49 71>; /* C Space */
             bindings = <&kp CAPS>;
         };
