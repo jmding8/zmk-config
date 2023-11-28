@@ -245,7 +245,7 @@
         };
         combo_caps {
             timeout-ms = <SPACE_COMBO_TIMEOUT>;
-            key-positions = <44 71>; /* L Space */
+            key-positions = <49 71>; /* C Space */
             bindings = <&kp CAPS>;
         };
     };
