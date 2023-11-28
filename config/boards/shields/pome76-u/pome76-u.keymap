@@ -99,11 +99,14 @@
         };
     };
 
+    // Position documentation.
+    // 63, 64, 65, and 66 are left hand modifier keys
+    // 72 and 73 and right hand layer keys
+    // 32 is S
+    // 43 is K
+    // 46 is the start of the Z row
+
     behaviors {
-        // 63, 64, 65, and 66 are left hand modifier keys
-        // 72 and 73 and right hand layer keys
-        // 32 is S
-        // 43 is K
         smt: s_macro_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "S_MACRO_TAP";
@@ -210,11 +213,6 @@
             key-positions = <34 35>; /* FG */
             bindings = <&kp ESC>;
         };
-        combo_caps {
-            timeout-ms = <SLOW_COMBO_TIMEOUT>;
-            key-positions = <57 58>; /* NM */
-            bindings = <&kp CAPS>;
-        };
         combo_menu {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <27 41>; /* UH */
@@ -246,6 +244,11 @@
             timeout-ms = <SPACE_COMBO_TIMEOUT>;
             key-positions = <60 71>; /* Dot Space */
             bindings = <&kp FSLH>;
+        };
+        combo_caps {
+            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            key-positions = <49 71>; /* C Space */
+            bindings = <&kp CAPS>;
         };
     };
 
