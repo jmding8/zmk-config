@@ -218,20 +218,20 @@
         };
 
         // Space combos
-        combo_lbkt {
+        combo_blsh {
             timeout-ms = <SPACE_COMBO_TIMEOUT>;
             key-positions = <28 71>; /* I Space */
+            bindings = <&kp BSLH>;
+        };
+        combo_lbkt {
+            timeout-ms = <SPACE_COMBO_TIMEOUT>;
+            key-positions = <29 71>; /* O Space */
             bindings = <&kp LBKT>;
         };
         combo_rbkt {
             timeout-ms = <SPACE_COMBO_TIMEOUT>;
-            key-positions = <29 71>; /* O Space */
-            bindings = <&kp RBKT>;
-        };
-        combo_blsh {
-            timeout-ms = <SPACE_COMBO_TIMEOUT>;
             key-positions = <30 71>; /* P Space */
-            bindings = <&kp BSLH>;
+            bindings = <&kp RBKT>;
         };
         combo_quot {
             timeout-ms = <SPACE_COMBO_TIMEOUT>;
