@@ -19,13 +19,14 @@
 #define CL  12    // C-Layer
 #define XVL 13    // X/V-Layer
 
-// See mercury-u.keymap for the early history of timeout values.
-// 12Nov2023
-// The word "sounds" still rarely comes out as "soundSHIFT", so let's decrease timeout from 50 ms to 35ms.
+// See mercury-u.keymap for the early history of FAST_COMBO_TIMEOUT values.
+// 12Nov2023: The word "sounds" still rarely comes out as "soundSHIFT", so let's decrease timeout from 50 ms to 35ms.
 #define FAST_COMBO_TIMEOUT 35
 
-// #define MEDIUM_COMBO_TIMEOUT 125
-#define MEDIUM_COMBO_TIMEOUT 80
+// #define SPACE_COMBO_TIMEOUT 80 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
+// #define SPACE_COMBO_TIMEOUT 60 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
+// #define SPACE_COMBO_TIMEOUT 35 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
+#define SPACE_COMBO_TIMEOUT 25
 
 // SLOW_COMBO_TIMEOUT is a very, very long and lenient timeout, and should be mostly only used for combos
 // involving keys that are pressed by the same finger (H & J for example).
@@ -96,11 +97,14 @@
         };
     };
 
+    // Position documentation.
+    // 63, 64, 65, and 66 are left hand modifier keys
+    // 72 and 73 and right hand layer keys
+    // 32 is S
+    // 43 is K
+    // 46 is the start of the Z row
+
     behaviors {
-        // 63, 64, 65, and 66 are left hand modifier keys
-        // 72 and 73 and right hand layer keys
-        // 32 is S
-        // 43 is K
         smt: s_macro_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "S_MACRO_TAP";
@@ -207,31 +211,42 @@
             key-positions = <34 35>; /* FG */
             bindings = <&kp ESC>;
         };
-        combo_quote {
-            timeout-ms = <FAST_COMBO_TIMEOUT>;
-            key-positions = <42 43>; /* JK */
-            bindings = <&kp QUOT>;
-        };
-        combo_quote_2 {
-            timeout-ms = <FAST_COMBO_TIMEOUT>;
-            key-positions = <44 45>; /* L; */
-            bindings = <&kp QUOT>;
-        };
-        combo_caps {
-            timeout-ms = <SLOW_COMBO_TIMEOUT>;
-            key-positions = <57 58>; /* NM */
-            bindings = <&kp CAPS>;
-        };
-        combo_fwd_slash {
-            timeout-ms = <FAST_COMBO_TIMEOUT>;
-            // HU is a little hard to reach */
-            key-positions = <59 60>; /* ,. */
-            bindings = <&kp FSLH>;
-        };
         combo_menu {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <27 41>; /* UH */
             bindings = <&kp K_CMENU>;
+        };
+
+        // Space combos
+        combo_lbkt {
+            timeout-ms = <SPACE_COMBO_TIMEOUT>;
+            key-positions = <28 71>; /* I Space */
+            bindings = <&kp LBKT>;
+        };
+        combo_rbkt {
+            timeout-ms = <SPACE_COMBO_TIMEOUT>;
+            key-positions = <29 71>; /* O Space */
+            bindings = <&kp RBKT>;
+        };
+        combo_blsh {
+            timeout-ms = <SPACE_COMBO_TIMEOUT>;
+            key-positions = <30 71>; /* P Space */
+            bindings = <&kp BSLH>;
+        };
+        combo_quot {
+            timeout-ms = <SPACE_COMBO_TIMEOUT>;
+            key-positions = <45 71>; /* Semicolon Space */
+            bindings = <&kp QUOT>;
+        };
+        combo_flsh {
+            timeout-ms = <SPACE_COMBO_TIMEOUT>;
+            key-positions = <60 71>; /* Dot Space */
+            bindings = <&kp FSLH>;
+        };
+        combo_caps {
+            timeout-ms = <SPACE_COMBO_TIMEOUT>;
+            key-positions = <44 71>; /* L Space */
+            bindings = <&kp CAPS>;
         };
     };
 
