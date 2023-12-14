@@ -26,7 +26,8 @@
 // #define SPACE_COMBO_TIMEOUT 80 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
 // #define SPACE_COMBO_TIMEOUT 60 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
 // #define SPACE_COMBO_TIMEOUT 35 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
-#define SPACE_COMBO_TIMEOUT 25
+// #define SPACE_COMBO_TIMEOUT 25 // 14Dec2023: Sometimes I miss attempt ` .` => `/` but it comes out as ` .` Hopefully increasing timeout will improve that.
+#define SPACE_COMBO_TIMEOUT 30
 
 // SLOW_COMBO_TIMEOUT is a very, very long and lenient timeout, and should be mostly only used for combos
 // involving keys that are pressed by the same finger (H & J for example).
