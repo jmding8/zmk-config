@@ -255,7 +255,7 @@
 
         windows_layer {
             bindings = <
-              &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6        &kp GRAV      &kp INS       &kp SLCK      &kp MINUS     &kp EQL       &kp N7        &kp N8        &kp N9        &kp N0        &kp ESC
+              &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6        &kp GRAV      &kp INS       &kp SLCK      &kp MINUS     &kp EQL       &kp N7        &kp N8        &kp N9        &kp N0        &kp BKSP
               &kp Q         &kp W         &kp E         &kp R         &kp T         &kp F9        &kp F10       &kp F11       &kp F12       &kp RBKT      &kp Y         &kp U         &kp I         &kp O         &kp P
               &kp A         &smt S S      &dlt DL D     &fmt F F      &kp G         &kp F5        &kp F6        &kp F7        &kp F8        &kp LBKT      &kp H         &kp J         &klt KL K     &lmt L L      &kp SCLN
 &kp LSFT      &kp Z         &xmt X X      &clt CL C     &vmt V V      &kp B         &kp F1        &kp F2        &kp F3        &kp F4        &kp BSLH      &kp N         &kp M         &kp CMMA      &kp DOT
