@@ -212,6 +212,11 @@
             key-positions = <34 35>; /* FG */
             bindings = <&kp ESC>;
         };
+        combo_keypad_esc {
+            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            key-positions = <38 39>; /* Kp6 KpPlus */
+            bindings = <&kp ESC>;
+        };
         combo_menu {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <27 41>; /* UH */
@@ -256,11 +261,11 @@
 
         windows_layer {
             bindings = <
-              &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6        &kp GRAV      &kp INS       &kp SLCK      &kp MINUS     &kp EQL       &kp N7        &kp N8        &kp N9        &kp N0        &kp BKSP
-              &kp Q         &kp W         &kp E         &kp R         &kp T         &kp F9        &kp F10       &kp F11       &kp F12       &kp RBKT      &kp Y         &kp U         &kp I         &kp O         &kp P
-              &kp A         &smt S S      &dlt DL D     &fmt F F      &kp G         &kp F5        &kp F6        &kp F7        &kp F8        &kp LBKT      &kp H         &kp J         &klt KL K     &lmt L L      &kp SCLN
-&kp LSFT      &kp Z         &xmt X X      &clt CL C     &vmt V V      &kp B         &kp F1        &kp F2        &kp F3        &kp F4        &kp BSLH      &kp N         &kp M         &kp CMMA      &kp DOT
-&kp ESC       &kp DEL       &kp SPC       &kp LGUI      &kp LCTL      &kp LALT      &kp SPC       &none         &none         &none         &kp SPC       &mo NAV       &mo MED       &kp BKSP      &kp RET
+              &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6        &kp KP_DIVIDE &kp KP_MULTIPLY  &kp BKSP   &kp MINUS     &kp EQL       &kp N7        &kp N8        &kp N9        &kp N0        &kp BKSP
+              &kp Q         &kp W         &kp E         &kp R         &kp T         &kp KP_N7     &kp KP_N8     &kp KP_N9     &kp KP_MINUS  &kp RBKT      &kp Y         &kp U         &kp I         &kp O         &kp P
+              &kp A         &smt S S      &dlt DL D     &fmt F F      &kp G         &kp KP_N4     &kp KP_N5     &kp KP_N6     &kp KP_PLUS   &kp LBKT      &kp H         &kp J         &klt KL K     &lmt L L      &kp SCLN
+&kp LSFT      &kp Z         &xmt X X      &clt CL C     &vmt V V      &kp B         &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp DEL       &kp BSLH      &kp N         &kp M         &kp CMMA      &kp DOT
+&kp ESC       &kp DEL       &kp SPC       &kp LGUI      &kp LCTL      &kp LALT      &kp SPC       &kp KP_N0     &kp KP_DOT    &kp KP_ENTER  &kp SPC       &mo NAV       &mo MED       &kp BKSP      &kp RET
             >;
         };
         
