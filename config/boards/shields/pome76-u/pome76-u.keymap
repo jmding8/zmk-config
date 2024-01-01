@@ -261,9 +261,9 @@
 
         windows_layer {
             bindings = <
-              &kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6        &kp KP_DIVIDE &kp KP_MULTIPLY  &kp KP_MINUS  &kp MINUS  &kp EQL       &kp N7        &kp N8        &kp N9        &kp N0        &kp BKSP
-              &kp Q         &kp W         &kp E         &kp R         &kp T         &kp N7        &kp N8        &kp N9        &kp KP_PLUS   &kp RBKT      &kp Y         &kp U         &kp I         &kp O         &kp P
-              &kp A         &smt S S      &dlt DL D     &fmt F F      &kp G         &kp N4        &kp N5        &kp N6        &kp BKSP      &kp LBKT      &kp H         &kp J         &klt KL K     &lmt L L      &kp SCLN
+&kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6       &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS &kp MINUS     &kp EQL       &kp N7        &kp N8        &kp N9        &kp N0        &kp BKSP
+&kp Q         &kp W         &kp E         &kp R         &kp T         &kp N7        &kp N8        &kp N9        &kp KP_PLUS   &kp RBKT      &kp Y         &kp U         &kp I         &kp O         &kp P
+&kp A         &smt S S      &dlt DL D     &fmt F F      &kp G         &kp N4        &kp N5        &kp N6        &kp BKSP      &kp LBKT      &kp H         &kp J         &klt KL K     &lmt L L      &kp SCLN
 &kp LSFT      &kp Z         &xmt X X      &clt CL C     &vmt V V      &kp B         &kp N1        &kp N2        &kp N3        &kp DEL       &kp BSLH      &kp N         &kp M         &kp CMMA      &kp DOT
 &kp ESC       &kp DEL       &kp SPC       &kp LGUI      &kp LCTL      &kp LALT      &kp SPC       &kp N0        &kp DOT       &kp RET       &kp SPC       &mo NAV       &mo MED       &kp BKSP      &kp RET
             >;
@@ -271,9 +271,9 @@
         
         apple_layer {
             bindings = <
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &kp LCTL      &kp LGUI      &kp LALT      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
@@ -282,9 +282,9 @@
 // game_layer is disabled (fully transparent) for now.
         game_layer {
             bindings = <
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
@@ -292,9 +292,9 @@
 
         num_layer {
             bindings = <
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp GRAV      &kp N7        &kp N8        &kp N9        &kp N0
-              &trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp EQL       &kp N4        &kp N5        &kp N6        &kp DOT
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp GRAV      &kp N7        &kp N8        &kp N9        &kp N0
+&trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp EQL       &kp N4        &kp N5        &kp N6        &kp DOT
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp MINUS     &kp N1        &kp N2        &kp N3
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp SPC       &mo NAV       &mo MED       &trans        &trans
 
@@ -303,20 +303,19 @@
 
         function_layer {
             bindings = <
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F12       &kp F7        &kp F8        &kp F9        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F11       &kp F4        &kp F5        &kp F6        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F12       &kp F7        &kp F8        &kp F9        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F11       &kp F4        &kp F5        &kp F6        &trans
 &trans        &trans        &kp LSFT      &mo CL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F10       &kp F1        &kp F2        &kp F3
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-
             >;
         };
 
         nav_layer {
             bindings = <
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp UARW      &kp PGUP      &kp DEL
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp LARW      &kp DARW      &kp RARW      &kp BKSP
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp UARW      &kp PGUP      &kp DEL
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp LARW      &kp DARW      &kp RARW      &kp BKSP
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp PGDN      &kp HOME      &kp END       &kp RET
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
@@ -324,9 +323,9 @@
 
         media_layer {
             bindings = <
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp C_VOL_UP  &trans        &kp PRSC
-              &trans        &kp SLCK      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp C_BRI_DN  &kp C_VOL_DN  &kp C_BRI_UP  &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp C_VOL_UP  &trans        &kp PRSC
+&trans        &kp SLCK      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp C_BRI_DN  &kp C_VOL_DN  &kp C_BRI_UP  &trans
 &trans        &trans        &trans        &trans        &trans    &kp PAUSE_BREAK   &trans        &trans        &trans        &trans        &trans        &trans        &kp INS       &kp C_MUTE    &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 
@@ -335,9 +334,9 @@
 
         system_layer {
             bindings = <
-              &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &to WIN       &trans        &sys_reset    &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &to APL       &out OUT_USB  &trans        &bootloader   &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &to WIN       &trans        &sys_reset    &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&to APL       &out OUT_USB  &trans        &bootloader   &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &bt BT_CLR    &trans        &out OUT_BLE  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
@@ -345,9 +344,9 @@
 
         d_key_layer {
             bindings = <
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &kp LSFT      &none         &mo NUM       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &kp LSFT      &none         &mo NUM       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
@@ -355,9 +354,9 @@
 
         sf_key_layer {
             bindings = <
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
@@ -365,9 +364,9 @@
 
         k_key_layer {
             bindings = <
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &none         &kp RSFT      &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &none         &kp RSFT      &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
@@ -375,9 +374,9 @@
 
         l_key_layer {
             bindings = <
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &mo KL        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &mo KL        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
@@ -385,9 +384,9 @@
 
         c_key_layer {
             bindings = <
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &kp LSFT      &none         &mo FUN       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
@@ -395,9 +394,9 @@
 
         xv_key_layer {
             bindings = <
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-              &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &mo CL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
