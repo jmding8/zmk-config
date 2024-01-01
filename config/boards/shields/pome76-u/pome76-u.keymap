@@ -207,7 +207,7 @@
 
         combo_sys {
             timeout-ms = <FAST_COMBO_TIMEOUT>;
-            key-positions = <16 17 18>;
+            key-positions = <0 1 2>; /* 1 2 3 */
             bindings = <&sl SYS>;
         };
         
@@ -216,22 +216,22 @@
         // them during normal typing, even with a very long timeout.
         combo_tab {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
-            key-positions = <19 35>; /* RG */
+            key-positions = <19 35>; /* R G */
             bindings = <&kp TAB>;
         };
         combo_esc {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
-            key-positions = <34 35>; /* FG */
+            key-positions = <34 35>; /* F G */
             bindings = <&kp ESC>;
         };
         combo_keypad_esc {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
-            key-positions = <38 39>; /* Kp6 KpPlus */
+            key-positions = <38 39>; /* Numpad6 NumpadPlus */
             bindings = <&kp ESC>;
         };
         combo_menu {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
-            key-positions = <27 41>; /* UH */
+            key-positions = <27 41>; /* U H */
             bindings = <&kp K_CMENU>;
         };
 
