@@ -19,9 +19,24 @@
 #define CL  12    // C-Layer
 #define XVL 13    // X/V-Layer
 
+// FAST_COMBO_TIMEOUT is very short.
+// It is used mostly for combos involving keys that might occur in sequence while typing common words.
+// For example SD => Shift, because S and D occur next to each other common words like "sounDS".
 // See mercury-u.keymap for the early history of FAST_COMBO_TIMEOUT values.
-// 12Nov2023: The word "sounds" still rarely comes out as "soundSHIFT", so let's decrease timeout from 50 ms to 35ms.
+// [12Nov2023] 50 => 35 ms Decrease timout due to (fairly rare) unintentional combo activations. E.g. the word "sounds" comes out as "sounSHIFT".
 #define FAST_COMBO_TIMEOUT 35
+
+// MEDIUM_COMBO_TIMEOUT is an intermediate timeout.
+// It is mostly used for combos involving keys that are unlikely to occur in sequence while typing common words.
+// For example ,. => FSLH, because , and . are unlikely to occur in sequence in normal typing.
+// [1Jan2024] Initialize 100 ms. Arbitarily chosen somewhere between FAST_COMBO_TIMEOUT (35 ms) and SLOW_COMBO_TIMEOUT (200 ms).
+#define MEDIUM_COMBO_TIMEOUT 100
+
+// SLOW_COMBO_TIMEOUT is very long.
+// It is mostly used for combos involving keys that are controlled by the same finger, and should therefore by typed relatively slowly and in strict sequence.
+// For example RG => TAB, because R and G are both actuated by the left index finger.
+// [?? 2022] Initialize 200 ms. Naively chosen to mimic QMK's default value of TAPPING_TERM.
+#define SLOW_COMBO_TIMEOUT 200
 
 // #define SPACE_COMBO_TIMEOUT 80 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
 // #define SPACE_COMBO_TIMEOUT 60 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
@@ -29,9 +44,6 @@
 // #define SPACE_COMBO_TIMEOUT 25 // 14Dec2023: Sometimes I miss attempt ` .` => `/` but it comes out as ` .` Hopefully increasing timeout will improve that.
 #define SPACE_COMBO_TIMEOUT 30
 
-// SLOW_COMBO_TIMEOUT is a very, very long and lenient timeout, and should be mostly only used for combos
-// involving keys that are pressed by the same finger (H & J for example).
-#define SLOW_COMBO_TIMEOUT 200
 
 / {
     behaviors {};
@@ -244,14 +256,24 @@
             key-positions = <45 71>; /* Semicolon Space */
             bindings = <&kp QUOT>;
         };
-        combo_flsh {
+        combo_quo2 {
+            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            key-positions = <44 45>; /* L Semicolon */
+            bindings = <&kp QUOT>;
+        };
+        combo_fslh {
             timeout-ms = <SPACE_COMBO_TIMEOUT>;
             key-positions = <60 71>; /* Dot Space */
             bindings = <&kp FSLH>;
         };
+        combo_fsl2 {
+            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            key-positions = <59 60>; /* Comma Dot */
+            bindings = <&kp FSLH>;
+        };
         combo_caps {
-            timeout-ms = <SPACE_COMBO_TIMEOUT>;
-            key-positions = <44 71>; /* L Space */
+            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            key-positions = <71 72>; /* Space NavLayer */
             bindings = <&kp CAPS>;
         };
     };
