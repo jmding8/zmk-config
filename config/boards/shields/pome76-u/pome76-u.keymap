@@ -252,21 +252,11 @@
             bindings = <&kp RBKT>;
         };
         combo_quot {
-            timeout-ms = <SPACE_COMBO_TIMEOUT>;
-            key-positions = <45 71>; /* Semicolon Space */
-            bindings = <&kp QUOT>;
-        };
-        combo_quo2 {
             timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
             key-positions = <44 45>; /* L Semicolon */
             bindings = <&kp QUOT>;
         };
         combo_fslh {
-            timeout-ms = <SPACE_COMBO_TIMEOUT>;
-            key-positions = <60 71>; /* Dot Space */
-            bindings = <&kp FSLH>;
-        };
-        combo_fsl2 {
             timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
             key-positions = <59 60>; /* Comma Dot */
             bindings = <&kp FSLH>;
