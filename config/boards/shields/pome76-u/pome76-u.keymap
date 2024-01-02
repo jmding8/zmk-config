@@ -272,7 +272,7 @@
         };
         combo_caps {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
-            key-positions = <71 72>; /* Space NavLayer */
+            key-positions = <14 15>; /* 0 Bksp */
             bindings = <&kp CAPS>;
         };
     };
