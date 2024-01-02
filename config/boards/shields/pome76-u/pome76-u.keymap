@@ -271,7 +271,7 @@
             bindings = <&kp FSLH>;
         };
         combo_caps {
-            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <14 15>; /* 0 Bksp */
             bindings = <&kp CAPS>;
         };
