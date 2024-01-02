@@ -205,10 +205,17 @@
     combos {
         compatible = "zmk,combos";
 
+        // System combos: combos related to configuring the board system.
         combo_sys {
             timeout-ms = <FAST_COMBO_TIMEOUT>;
             key-positions = <0 1 2>; /* 1 2 3 */
             bindings = <&sl SYS>;
+        };
+        combo_flash {
+            timeout-ms = <FAST_COMBO_TIMEOUT>;
+            key-positions = <19 35 50>; /* R F V */
+            bindings = <&sl bootloader>;
+            layers = <SYS>;
         };
         
         // Slow combos: these combos exclusively use keys controlled by a single index-finger,
