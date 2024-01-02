@@ -40,12 +40,12 @@
 // [?? 2022] Initialize 200 ms. Naively chosen to mimic QMK's default value of TAPPING_TERM.
 #define SLOW_COMBO_TIMEOUT 200
 
-// #define SPACE_COMBO_TIMEOUT 80 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
-// #define SPACE_COMBO_TIMEOUT 60 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
-// #define SPACE_COMBO_TIMEOUT 35 // 27Nov2023: Space combos sometimes trigger unintentionally. For example "git pull" came out as "git\ull".
-// #define SPACE_COMBO_TIMEOUT 25 // 14Dec2023: Sometimes I miss attempt ` .` => `/` but it comes out as ` .` Hopefully increasing timeout will improve that.
+// [27Nov2023] Initialize at 80 ms.
+// [27Nov2023] 80 => 60 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
+// [27Nov2023] 80 => 35 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
+// [27Nov2023] 35 => 25 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
+// [14Dec2023] 25 => 35 ms. Sometimes combo attempts are missed. For example " ." => "/" comes out as " ." instead of the intended "/". Hopefully increasing timeout will improve that.
 #define SPACE_COMBO_TIMEOUT 30
-
 
 / {
     behaviors {};
