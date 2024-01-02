@@ -27,10 +27,11 @@
 #define FAST_COMBO_TIMEOUT 35
 
 // MEDIUM_COMBO_TIMEOUT is an intermediate timeout.
-// It is mostly used for combos involving keys that are moderately unlikely to occur in sequence while typing common words.
-// For example ,. => FSLH, because , and . are moderately unlikely to occur in sequence in normal typing.
+// It is mostly used for combos involving keys that infrequently occur in sequence while typing common words.
+// For example ,. => FSLH, because , and . only occur in sequence infrequently during normal typing (for example, if the user type's "<>").
 // [1Jan2024] Initialize 100 ms. Arbitarily chosen somewhere between FAST_COMBO_TIMEOUT (35 ms) and SLOW_COMBO_TIMEOUT (200 ms).
-#define MEDIUM_COMBO_TIMEOUT 100
+// [1Jan2024] 100 => 75 ms because ,. => FSLH is unintentionally being triggered when I attempt to type "<>".
+#define MEDIUM_COMBO_TIMEOUT 75
 
 // SLOW_COMBO_TIMEOUT is very long.
 // It is mostly used for combos involving keys that are controlled by the same finger, and should therefore by typed relatively slowly and in strict sequence.
