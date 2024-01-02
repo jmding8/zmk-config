@@ -215,7 +215,7 @@
         combo_flash {
             timeout-ms = <FAST_COMBO_TIMEOUT>;
             key-positions = <19 35 50>; /* R F V */
-            bindings = <&sl bootloader>;
+            bindings = <&bootloader>;
             layers = <SYS>;
         };
         
