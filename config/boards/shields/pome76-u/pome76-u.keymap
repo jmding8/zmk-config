@@ -314,9 +314,9 @@
         num_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp GRAV      &kp N7        &kp N8        &kp N9        &kp N0
-&trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp EQL       &kp N4        &kp N5        &kp N6        &kp DOT
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp MINUS     &kp N1        &kp N2        &kp N3
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp N6        &kp N7        &kp N8        &kp N9        &kp N0
+&trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp N1        &kp N2        &kp N3        &kp N4        &kp N5
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp MINUS     &kp EQL       &kp GRAV      &kp DOT
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp SPC       &mo NAV       &mo MED       &trans        &trans
 
             >;
