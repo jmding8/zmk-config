@@ -225,7 +225,7 @@
 
         // System combos: combos related to configuring the board system.
         combo_sys {
-            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <0 1 2>; /* 1 2 3 */
             bindings = <&sl SYS>;
         };
