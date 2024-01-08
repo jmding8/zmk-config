@@ -364,7 +364,6 @@
 &trans        &kp SLCK      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp C_BRI_DN  &kp C_VOL_DN  &kp C_BRI_UP  &trans
 &trans        &trans        &trans        &trans        &trans    &kp PAUSE_BREAK   &trans        &trans        &trans        &trans        &trans        &trans        &kp INS       &kp C_MUTE    &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-
             >;
         };
 
@@ -372,7 +371,7 @@
             bindings = <
 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &to WIN       &trans        &sys_reset    &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&to APL       &out OUT_USB  &trans        &fht trans F  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&to APL       &out OUT_USB  &trans        &fht F F      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &bt BT_CLR    &trans        &out OUT_BLE  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
