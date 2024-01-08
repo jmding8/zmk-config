@@ -133,7 +133,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <EXTREMELY_SLOW_COMBO_TIMEOUT>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&bootloader>, <&kp>;
         };
 
         smt: s_macro_tap {
@@ -372,7 +372,7 @@
             bindings = <
 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &to WIN       &trans        &sys_reset    &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&to APL       &out OUT_USB  &trans    &fht bootloader F &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&to APL       &out OUT_USB  &trans        &fht trans F  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &bt BT_CLR    &trans        &out OUT_BLE  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
