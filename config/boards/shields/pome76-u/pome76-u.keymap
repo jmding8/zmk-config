@@ -40,6 +40,12 @@
 // [?? 2022] Initialize 200 ms. Naively chosen to mimic QMK's default value of TAPPING_TERM.
 #define SLOW_COMBO_TIMEOUT 200
 
+// EXTREMELY_SLOW_COMBO_TIMEOUT is extremely long.
+// It is for hold-tap behaviors where the user needs to press and hold a key for a long time, to trigger an obscure behavior.
+// For example F => reboot in flashing mode.
+// [7Jan2024] Initialize 3000 ms.
+#define EXTREMELY_SLOW_COMBO_TIMEOUT 3000
+
 // [27Nov2023] Initialize at 80 ms.
 // [27Nov2023] 80 => 60 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
 // [27Nov2023] 80 => 35 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
@@ -120,6 +126,16 @@
     // 46 is the start of the Z row
 
     behaviors {
+        // F-key: hold = flash, tap = F
+        fht: f_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "F_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <EXTREMELY_SLOW_COMBO_TIMEOUT>;
+            bindings = <&bootloader>, <&kp>;
+        };
+
         smt: s_macro_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "S_MACRO_TAP";
@@ -209,15 +225,9 @@
 
         // System combos: combos related to configuring the board system.
         combo_sys {
-            timeout-ms = <FAST_COMBO_TIMEOUT>;
+            timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <0 1 2>; /* 1 2 3 */
             bindings = <&sl SYS>;
-        };
-        combo_flash {
-            timeout-ms = <FAST_COMBO_TIMEOUT>;
-            key-positions = <19 34 50>; /* R F V */
-            bindings = <&bootloader>;
-            layers = <SYS>;
         };
         
         // Slow combos: these combos exclusively use keys controlled by a single index-finger,
@@ -318,7 +328,6 @@
 &trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp EQL       &kp N4        &kp N5        &kp N6        &kp DOT
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp MINUS     &kp N1        &kp N2        &kp N3
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp SPC       &mo NAV       &mo MED       &trans        &trans
-
             >;
         };
 
@@ -349,7 +358,6 @@
 &trans        &kp SLCK      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp C_BRI_DN  &kp C_VOL_DN  &kp C_BRI_UP  &trans
 &trans        &trans        &trans        &trans        &trans    &kp PAUSE_BREAK   &trans        &trans        &trans        &trans        &trans        &trans        &kp INS       &kp C_MUTE    &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-
             >;
         };
 
@@ -357,7 +365,7 @@
             bindings = <
 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &to WIN       &trans        &sys_reset    &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&to APL       &out OUT_USB  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&to APL       &out OUT_USB  &trans        &fht F F      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &bt BT_CLR    &trans        &out OUT_BLE  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
