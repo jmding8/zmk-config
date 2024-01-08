@@ -333,7 +333,6 @@
 &trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp EQL       &kp N4        &kp N5        &kp N6        &kp DOT
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp MINUS     &kp N1        &kp N2        &kp N3
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp SPC       &mo NAV       &mo MED       &trans        &trans
-
             >;
         };
 
