@@ -50,8 +50,9 @@
 // [27Nov2023] 80 => 60 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
 // [27Nov2023] 80 => 35 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
 // [27Nov2023] 35 => 25 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
-// [14Dec2023] 25 => 35 ms. Sometimes combo attempts are missed. For example " ." => "/" comes out as " ." instead of the intended "/". Hopefully increasing timeout will improve that.
-#define SPACE_COMBO_TIMEOUT 30
+// [14Dec2023] 25 => 30 ms. Sometimes combo attempts are missed. For example " ." => "/" comes out as " ." instead of the intended "/". Hopefully increasing timeout will improve that.
+// [27Jan2024] 30 => 25 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull". Maybe with practice, I will be able to get consistent with 25 ms.
+#define SPACE_COMBO_TIMEOUT 25
 
 / {
     behaviors {};
