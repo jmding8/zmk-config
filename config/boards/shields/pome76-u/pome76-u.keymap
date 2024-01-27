@@ -253,23 +253,6 @@
             key-positions = <27 41>; /* U H */
             bindings = <&kp K_CMENU>;
         };
-
-        // Space combos
-        combo_blsh {
-            timeout-ms = <SPACE_COMBO_TIMEOUT>;
-            key-positions = <28 71>; /* I Space */
-            bindings = <&kp BSLH>;
-        };
-        combo_lbkt {
-            timeout-ms = <SPACE_COMBO_TIMEOUT>;
-            key-positions = <29 71>; /* O Space */
-            bindings = <&kp LBKT>;
-        };
-        combo_rbkt {
-            timeout-ms = <SPACE_COMBO_TIMEOUT>;
-            key-positions = <30 71>; /* P Space */
-            bindings = <&kp RBKT>;
-        };
         combo_quot {
             timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
             key-positions = <44 45>; /* L Semicolon */
@@ -284,6 +267,11 @@
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <14 15>; /* 0 Bksp */
             bindings = <&kp CAPS>;
+        };
+        combo_rgui {
+            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            key-positions = <71 72>; /* Space nav_layer */
+            bindings = <&kp RGUI>;
         };
     };
 
@@ -324,10 +312,10 @@
         num_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp GRAV      &kp N7        &kp N8        &kp N9        &kp N0
-&trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp EQL       &kp N4        &kp N5        &kp N6        &kp DOT
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp MINUS     &kp N1        &kp N2        &kp N3
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp SPC       &mo NAV       &mo MED       &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp BSLH      &kp LBKT      &kp RBKT      &trans
+&trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp MINUS     &kp EQL       &kp GRAV      &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
 
