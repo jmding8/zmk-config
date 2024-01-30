@@ -221,7 +221,7 @@
             label = "SYMBOLS_LAYER_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <SLOW_COMBO_TIMEOUT>;
+            tapping-term-ms = <1000>; // 200 was a little too short as I am learning the keymap. Increasing to 1000.
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <42 43 44>; // J K L
         };
