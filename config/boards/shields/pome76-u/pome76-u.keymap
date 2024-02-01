@@ -232,16 +232,11 @@
     combos {
         compatible = "zmk,combos";
 
-        // System combos: combos related to configuring the board system.
         combo_sys {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <0 1 2>; /* 1 2 3 */
             bindings = <&sl SYS>;
         };
-        
-        // Slow combos: these combos exclusively use keys controlled by a single index-finger,
-        // which makes them very unlikely to be accidentally triggered by a standard touch-typist
-        // them during normal typing, even with a very long timeout.
         combo_tab {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <19 35>; /* R G */
@@ -261,23 +256,6 @@
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <27 41>; /* U H */
             bindings = <&kp K_CMENU>;
-        };
-
-        // Space combos
-        combo_blsh {
-            timeout-ms = <SPACE_COMBO_TIMEOUT>;
-            key-positions = <28 71>; /* I Space */
-            bindings = <&kp BSLH>;
-        };
-        combo_lbkt {
-            timeout-ms = <SPACE_COMBO_TIMEOUT>;
-            key-positions = <29 71>; /* O Space */
-            bindings = <&kp LBKT>;
-        };
-        combo_rbkt {
-            timeout-ms = <SPACE_COMBO_TIMEOUT>;
-            key-positions = <30 71>; /* P Space */
-            bindings = <&kp RBKT>;
         };
         combo_quot {
             timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
