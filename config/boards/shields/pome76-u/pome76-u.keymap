@@ -6,7 +6,7 @@
 // Layers ENUM
 #define WIN 0     // Windows
 #define APL 1     // Apple
-#define GAM 2     // Gaming
+#define SYL 2     // Extra Symbols
 #define NUM 3     // Numbers
 #define FUN 4     // Function (F-keys)
 #define NAV 5     // Navigation
@@ -215,6 +215,15 @@
             bindings = <&mcv>, <&kp>;
             hold-trigger-key-positions = <48 49 63 64 65 66 72 73>;
         };
+
+        sylt: symbols_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SYMBOLS_LAYER_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <1000>; // 200 was a little too short as I am learning the keymap. Increasing to 1000.
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     sl {
@@ -223,16 +232,11 @@
     combos {
         compatible = "zmk,combos";
 
-        // System combos: combos related to configuring the board system.
         combo_sys {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <0 1 2>; /* 1 2 3 */
             bindings = <&sl SYS>;
         };
-        
-        // Slow combos: these combos exclusively use keys controlled by a single index-finger,
-        // which makes them very unlikely to be accidentally triggered by a standard touch-typist
-        // them during normal typing, even with a very long timeout.
         combo_tab {
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <19 35>; /* R G */
@@ -252,23 +256,6 @@
             timeout-ms = <SLOW_COMBO_TIMEOUT>;
             key-positions = <27 41>; /* U H */
             bindings = <&kp K_CMENU>;
-        };
-
-        // Space combos
-        combo_blsh {
-            timeout-ms = <SPACE_COMBO_TIMEOUT>;
-            key-positions = <28 71>; /* I Space */
-            bindings = <&kp BSLH>;
-        };
-        combo_lbkt {
-            timeout-ms = <SPACE_COMBO_TIMEOUT>;
-            key-positions = <29 71>; /* O Space */
-            bindings = <&kp LBKT>;
-        };
-        combo_rbkt {
-            timeout-ms = <SPACE_COMBO_TIMEOUT>;
-            key-positions = <30 71>; /* P Space */
-            bindings = <&kp RBKT>;
         };
         combo_quot {
             timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
@@ -296,7 +283,7 @@
 &kp Q         &kp W         &kp E         &kp R         &kp T         &kp N7        &kp N8        &kp N9        &kp KP_PLUS   &kp RBKT      &kp Y         &kp U         &kp I         &kp O         &kp P
 &kp A         &smt S S      &dlt DL D     &fmt F F      &kp G         &kp N4        &kp N5        &kp N6        &kp BKSP      &kp LBKT      &kp H         &kp J         &klt KL K     &lmt L L      &kp SCLN
 &kp LSFT      &kp Z         &xmt X X      &clt CL C     &vmt V V      &kp B         &kp N1        &kp N2        &kp N3        &kp DEL       &kp BSLH      &kp N         &kp M         &kp CMMA      &kp DOT
-&kp ESC       &kp DEL       &kp SPC       &kp LGUI      &kp LCTL      &kp LALT      &kp SPC       &kp N0        &kp DOT       &kp RET       &kp SPC       &mo NAV       &mo MED       &kp BKSP      &kp RET
+&kp ESC       &kp DEL       &kp SPC       &kp LGUI      &kp LCTL      &kp LALT      &kp SPC       &kp N0        &kp DOT       &sylt SYL RET &kp SPC       &mo NAV       &mo MED       &kp BKSP      &kp RET
             >;
         };
         
@@ -310,12 +297,11 @@
             >;
         };
 
-// game_layer is disabled (fully transparent) for now.
-        game_layer {
+        symbols_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp BSLH      &kp LBKT      &kp RBKT      &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
