@@ -32,7 +32,8 @@
 // [1Jan2024] Initialize 100 ms. Arbitarily chosen somewhere between FAST_TIMEOUT (35 ms) and SLOW_TIMEOUT (200 ms).
 // [1Jan2024] 100 => 75 ms because ,. => FSLH is unintentionally being triggered when I attempt to type "<>".
 // [1Jan2024] 75 => 50 ms because typing "<>" quickly still triggers FSLH too eagerly.
-#define MEDIUM_TIMEOUT 50
+// [3Feb2024] 50 => 67 ms because I am missing " (L+;) too frequently.
+#define MEDIUM_TIMEOUT 67
 
 // SLOW_TIMEOUT is very long.
 // It is mostly used for combos involving keys that are controlled by the same finger, and should therefore by typed relatively slowly and in strict sequence.
