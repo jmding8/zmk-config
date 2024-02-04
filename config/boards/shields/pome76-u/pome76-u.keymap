@@ -19,39 +19,32 @@
 #define CL  12    // C-Layer
 #define XVL 13    // X/V-Layer
 
-// FAST_COMBO_TIMEOUT is very short.
+// FAST_TIMEOUT is very short.
 // It is used mostly for combos involving keys that might occur in sequence while typing common words.
 // For example SD => Shift, because S and D occur next to each other common words like "sounDS".
-// See mercury-u.keymap for the early history of FAST_COMBO_TIMEOUT values.
+// See mercury-u.keymap for the early history of FAST_TIMEOUT values.
 // [12Nov2023] 50 => 35 ms Decrease timout due to (fairly rare) unintentional combo activations. E.g. the word "sounds" comes out as "sounSHIFT".
-#define FAST_COMBO_TIMEOUT 35
+#define FAST_TIMEOUT 35
 
-// MEDIUM_COMBO_TIMEOUT is an intermediate timeout.
+// MEDIUM_TIMEOUT is an intermediate timeout.
 // It is mostly used for combos involving keys that infrequently occur in sequence while typing common words.
 // For example ,. => FSLH, because , and . only occur in sequence infrequently during normal typing (for example, if the user type's "<>").
-// [1Jan2024] Initialize 100 ms. Arbitarily chosen somewhere between FAST_COMBO_TIMEOUT (35 ms) and SLOW_COMBO_TIMEOUT (200 ms).
+// [1Jan2024] Initialize 100 ms. Arbitarily chosen somewhere between FAST_TIMEOUT (35 ms) and SLOW_TIMEOUT (200 ms).
 // [1Jan2024] 100 => 75 ms because ,. => FSLH is unintentionally being triggered when I attempt to type "<>".
 // [1Jan2024] 75 => 50 ms because typing "<>" quickly still triggers FSLH too eagerly.
-#define MEDIUM_COMBO_TIMEOUT 50
+#define MEDIUM_TIMEOUT 50
 
-// SLOW_COMBO_TIMEOUT is very long.
+// SLOW_TIMEOUT is very long.
 // It is mostly used for combos involving keys that are controlled by the same finger, and should therefore by typed relatively slowly and in strict sequence.
 // For example RG => TAB, because R and G are both actuated by the left index finger.
 // [?? 2022] Initialize 200 ms. Naively chosen to mimic QMK's default value of TAPPING_TERM.
-#define SLOW_COMBO_TIMEOUT 200
+#define SLOW_TIMEOUT 200
 
-// EXTREMELY_SLOW_COMBO_TIMEOUT is extremely long.
+// EXTREMELY_SLOW_TIMEOUT is extremely long.
 // It is for hold-tap behaviors where the user needs to press and hold a key for a long time, to trigger an obscure behavior.
 // For example F => reboot in flashing mode.
 // [7Jan2024] Initialize 3000 ms.
-#define EXTREMELY_SLOW_COMBO_TIMEOUT 3000
-
-// [27Nov2023] Initialize at 80 ms.
-// [27Nov2023] 80 => 60 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
-// [27Nov2023] 80 => 35 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
-// [27Nov2023] 35 => 25 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
-// [14Dec2023] 25 => 35 ms. Sometimes combo attempts are missed. For example " ." => "/" comes out as " ." instead of the intended "/". Hopefully increasing timeout will improve that.
-#define SPACE_COMBO_TIMEOUT 30
+#define EXTREMELY_SLOW_TIMEOUT 3000
 
 / {
     behaviors {};
@@ -132,7 +125,7 @@
             label = "F_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <EXTREMELY_SLOW_COMBO_TIMEOUT>;
+            tapping-term-ms = <EXTREMELY_SLOW_TIMEOUT>;
             bindings = <&bootloader>, <&kp>;
         };
 
@@ -141,7 +134,7 @@
             label = "S_MACRO_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mcs>, <&kp>;
             hold-trigger-key-positions = <33 34 63 64 65 66 72 73>;
         };
@@ -151,7 +144,7 @@
             label = "D_LAYER_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <32 34 63 64 65 66 72 73>;
         };
@@ -161,7 +154,7 @@
             label = "F_MACRO_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mcf>, <&kp>;
             hold-trigger-key-positions = <32 33 63 64 65 66 72 73>;
         };
@@ -171,7 +164,7 @@
             label = "K_LAYER_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <44 63 64 65 66 72 73>;
         };
@@ -181,7 +174,7 @@
             label = "L_MACRO_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mcl>, <&kp>;
             hold-trigger-key-positions = <43 63 64 65 66 72 73>;
         };
@@ -191,7 +184,7 @@
             label = "X_MACRO_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mcx>, <&kp>;
             hold-trigger-key-positions = <49 50 63 64 65 66 72 73>;
         };
@@ -201,7 +194,7 @@
             label = "C_LAYER_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mo>, <&kp>;
             hold-trigger-key-positions = <48 50 63 64 65 66 72 73>;
         };
@@ -211,7 +204,7 @@
             label = "V_MACRO_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <FAST_COMBO_TIMEOUT>;
+            tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mcv>, <&kp>;
             hold-trigger-key-positions = <48 49 63 64 65 66 72 73>;
         };
@@ -233,42 +226,42 @@
         compatible = "zmk,combos";
 
         combo_sys {
-            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            timeout-ms = <SLOW_TIMEOUT>;
             key-positions = <0 1 2>; /* 1 2 3 */
             bindings = <&sl SYS>;
         };
         combo_tab {
-            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            timeout-ms = <SLOW_TIMEOUT>;
             key-positions = <19 35>; /* R G */
             bindings = <&kp TAB>;
         };
         combo_esc {
-            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            timeout-ms = <SLOW_TIMEOUT>;
             key-positions = <34 35>; /* F G */
             bindings = <&kp ESC>;
         };
         combo_keypad_esc {
-            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            timeout-ms = <SLOW_TIMEOUT>;
             key-positions = <38 39>; /* Numpad6 NumpadPlus */
             bindings = <&kp ESC>;
         };
         combo_menu {
-            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            timeout-ms = <SLOW_TIMEOUT>;
             key-positions = <27 41>; /* U H */
             bindings = <&kp K_CMENU>;
         };
         combo_quot {
-            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            timeout-ms = <MEDIUM_TIMEOUT>;
             key-positions = <44 45>; /* L Semicolon */
             bindings = <&kp QUOT>;
         };
         combo_fslh {
-            timeout-ms = <MEDIUM_COMBO_TIMEOUT>;
+            timeout-ms = <MEDIUM_TIMEOUT>;
             key-positions = <59 60>; /* Comma Dot */
             bindings = <&kp FSLH>;
         };
         combo_caps {
-            timeout-ms = <SLOW_COMBO_TIMEOUT>;
+            timeout-ms = <SLOW_TIMEOUT>;
             key-positions = <14 15>; /* 0 Bksp */
             bindings = <&kp CAPS>;
         };
