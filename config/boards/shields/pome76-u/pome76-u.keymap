@@ -113,10 +113,10 @@
 
     // Position documentation.
     // 63, 64, 65, and 66 are left hand modifier keys
-    // 72 and 73 and right hand layer keys
+    // 72 and 73 and right hand layer keys (nav and media layers)
     // 32 is S
     // 43 is K
-    // 46 is the start of the Z row
+    // 56 is the start of the Z row
 
     behaviors {
         // F-key: hold = flash, tap = F
@@ -265,6 +265,11 @@
             key-positions = <14 15>; /* 0 Bksp */
             bindings = <&kp CAPS>;
         };
+        combo_rgui {
+            timeout-ms = <SLOW_TIMEOUT>;
+            key-positions = <71 72>; /* Space NavLayer */
+            bindings = <&kp RGUI>;
+        };
     };
 
     keymap {
@@ -303,10 +308,10 @@
         num_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp GRAV      &kp N7        &kp N8        &kp N9        &kp N0
-&trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp EQL       &kp N4        &kp N5        &kp N6        &kp DOT
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp MINUS     &kp N1        &kp N2        &kp N3
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp SPC       &mo NAV       &mo MED       &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp GRAV      &kp MINUS     &kp EQL       &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
 
