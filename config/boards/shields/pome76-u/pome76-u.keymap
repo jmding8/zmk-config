@@ -235,19 +235,9 @@
             key-positions = <26 40>; /* U H */
             bindings = <&kp K_CMENU>;
         };
-        combo_quot {
-            timeout-ms = <MEDIUM_TIMEOUT>;
-            key-positions = <43 44>; /* L Semicolon */
-            bindings = <&kp QUOT>;
-        };
-        combo_fslh {
-            timeout-ms = <MEDIUM_TIMEOUT>;
-            key-positions = <58 59>; /* Comma Dot */
-            bindings = <&kp FSLH>;
-        };
         combo_caps {
             timeout-ms = <SLOW_TIMEOUT>;
-            key-positions = <13 14>; /* 0 Bksp */
+            key-positions = <14 15>; /* Minus Equal */
             bindings = <&kp CAPS>;
         };
         combo_rgui {
