@@ -284,7 +284,7 @@
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp LBKT      &kp RBKT      &trans        &trans
-&trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp GRAV      &trans
+&trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp GRAV      &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
