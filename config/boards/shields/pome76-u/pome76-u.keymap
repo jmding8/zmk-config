@@ -113,10 +113,8 @@
     };
 
     // Position documentation.
-    // 63, 64, 65, and 66 are left hand modifier keys
-    // 72 and 73 and right hand layer keys (nav and media layers)
+    // 64, 65, and 66 are left hand modifier keys
     // 32 is S
-    // 43 is K
     // 56 is the start of the Z row
 
     behaviors {
@@ -137,7 +135,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mcs>, <&kp>;
-            hold-trigger-key-positions = <33 34 63 64 65 66 72 73>;
+            hold-trigger-key-positions = <33 34 64 65 66 71 72>;
         };
 
         dlt: d_layer_tap {
@@ -147,7 +145,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <32 34 63 64 65 66 72 73>;
+            hold-trigger-key-positions = <32 34 64 65 66 71 72>;
         };
 
         fmt: f_macro_tap {
@@ -157,7 +155,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mcf>, <&kp>;
-            hold-trigger-key-positions = <32 33 63 64 65 66 72 73>;
+            hold-trigger-key-positions = <32 33 64 65 66 71 72>;
         };
 
         klt: k_layer_tap {
@@ -167,7 +165,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <44 63 64 65 66 72 73>;
+            hold-trigger-key-positions = <43 64 65 66 71 72>;
         };
         
         lmt: l_macro_tap {
@@ -177,7 +175,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mcl>, <&kp>;
-            hold-trigger-key-positions = <43 63 64 65 66 72 73>;
+            hold-trigger-key-positions = <42 64 65 66 71 72>;
         };
 
         xmt: x_macro_tap {
@@ -187,7 +185,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mcx>, <&kp>;
-            hold-trigger-key-positions = <49 50 63 64 65 66 72 73>;
+            hold-trigger-key-positions = <49 50 64 65 66 71 72>;
         };
 
         clt: c_layer_tap {
@@ -197,7 +195,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <48 50 63 64 65 66 72 73>;
+            hold-trigger-key-positions = <48 50 64 65 66 71 72>;
         };
 
         vmt: v_macro_tap {
@@ -207,7 +205,7 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <FAST_TIMEOUT>;
             bindings = <&mcv>, <&kp>;
-            hold-trigger-key-positions = <48 49 63 64 65 66 72 73>;
+            hold-trigger-key-positions = <48 49 64 65 66 71 72>;
         };
     };
 
@@ -232,34 +230,19 @@
             key-positions = <34 35>; /* F G */
             bindings = <&kp ESC>;
         };
-        combo_keypad_esc {
-            timeout-ms = <SLOW_TIMEOUT>;
-            key-positions = <38 39>; /* Numpad6 NumpadPlus */
-            bindings = <&kp ESC>;
-        };
         combo_menu {
             timeout-ms = <SLOW_TIMEOUT>;
-            key-positions = <27 41>; /* U H */
+            key-positions = <26 40>; /* U H */
             bindings = <&kp K_CMENU>;
-        };
-        combo_quot {
-            timeout-ms = <MEDIUM_TIMEOUT>;
-            key-positions = <44 45>; /* L Semicolon */
-            bindings = <&kp QUOT>;
-        };
-        combo_fslh {
-            timeout-ms = <MEDIUM_TIMEOUT>;
-            key-positions = <59 60>; /* Comma Dot */
-            bindings = <&kp FSLH>;
         };
         combo_caps {
             timeout-ms = <SLOW_TIMEOUT>;
-            key-positions = <14 15>; /* 0 Bksp */
+            key-positions = <14 15>; /* Minus Equal */
             bindings = <&kp CAPS>;
         };
         combo_rgui {
             timeout-ms = <SLOW_TIMEOUT>;
-            key-positions = <71 72>; /* Space NavLayer */
+            key-positions = <70 71>; /* Space NavLayer */
             bindings = <&kp RGUI>;
         };
     };
@@ -269,11 +252,11 @@
 
         windows_layer {
             bindings = <
-&kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6       &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS &kp MINUS     &kp EQL       &kp N7        &kp N8        &kp N9        &kp N0        &kp BKSP
-&kp Q         &kp W         &kp E         &kp R         &kp T         &kp N7        &kp N8        &kp N9        &kp KP_PLUS   &kp RBKT      &kp Y         &kp U         &kp I         &kp O         &kp P
-&kp A         &smt S S      &dlt DL D     &fmt F F      &kp G         &kp N4        &kp N5        &kp N6        &kp BKSP      &kp LBKT      &kp H         &kp J         &klt KL K     &lmt L L      &kp SCLN
-&kp LSFT      &kp Z         &xmt X X      &clt CL C     &vmt V V      &kp B         &kp N1        &kp N2        &kp N3        &kp DEL       &kp BSLH      &kp N         &kp M         &kp CMMA      &kp DOT
-&kp ESC       &kp DEL       &kp SPC       &kp LGUI      &kp LCTL      &kp LALT      &kp SPC       &kp N0        &kp DOT       &kp RET       &kp SPC       &mo NAV       &mo MED       &kp DEL       &kp RET
+&kp N1        &kp N2        &kp N3        &kp N4        &kp N5        &kp N6       &kp KP_DIVIDE &kp KP_MULTIPLY &kp KP_MINUS &kp MINUS     &kp N7        &kp N8        &kp N9        &kp N0        &kp MINUS     &kp EQL
+&kp Q         &kp W         &kp E         &kp R         &kp T         &kp N7        &kp N8        &kp N9        &kp KP_PLUS   &kp Y         &kp U         &kp I         &kp O         &kp P         &kp BSLH
+&kp A         &smt S S      &dlt DL D     &fmt F F      &kp G         &kp N4        &kp N5        &kp N6        &kp BKSP      &kp H         &kp J         &klt KL K     &lmt L L      &kp SCLN      &kp QUOT
+&kp LSFT      &kp Z         &xmt X X      &clt CL C     &vmt V V      &kp B         &kp N1        &kp N2        &kp N3        &kp BSLH      &kp N         &kp M         &kp CMMA      &kp DOT       &kp FSLH
+&kp ESC       &kp DEL       &kp SPC       &kp LGUI      &kp LCTL      &kp LALT      &kp SPC       &kp N0        &kp DOT       &kp SPC       &mo NAV       &mo MED       &kp DEL       &kp RET       &kp BKSP
             >;
         };
         
@@ -300,8 +283,8 @@
         num_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp BSLH      &kp LBKT      &kp RBKT      &trans
-&trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp MINUS     &kp EQL       &kp GRAV      &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp LBKT      &kp RBKT      &trans        &trans
+&trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp GRAV      &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
@@ -310,9 +293,9 @@
         function_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F12       &kp F7        &kp F8        &kp F9        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F11       &kp F4        &kp F5        &kp F6        &trans
-&trans        &trans        &kp LSFT      &mo CL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F10       &kp F1        &kp F2        &kp F3
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F12       &kp F7        &kp F8        &kp F9        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp F11       &kp F4        &kp F5        &kp F6        &trans        &trans
+&trans        &trans        &kp LSFT      &mo CL        &trans        &trans        &trans        &trans        &trans        &trans        &kp F10       &kp F1        &kp F2        &kp F3        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
@@ -320,9 +303,9 @@
         nav_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp UARW      &kp PGUP      &kp DEL
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp LARW      &kp DARW      &kp RARW      &kp BKSP
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp PGDN      &kp HOME      &kp END       &kp RET
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp UARW      &kp PGUP      &kp DEL       &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp LARW      &kp DARW      &kp RARW      &kp BKSP      &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp PGDN      &kp HOME      &kp END       &trans        &kp RET
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
@@ -330,9 +313,9 @@
         media_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp C_VOL_UP  &trans        &kp PRSC
-&trans        &kp SLCK      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp C_BRI_DN  &kp C_VOL_DN  &kp C_BRI_UP  &trans
-&trans        &trans        &trans        &trans        &trans    &kp PAUSE_BREAK   &trans        &trans        &trans        &trans        &trans        &trans        &kp INS       &kp C_MUTE    &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp C_VOL_UP  &trans        &kp PRSC      &trans
+&trans        &kp SLCK      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp C_BRI_DN  &kp C_VOL_DN  &kp C_BRI_UP  &trans        &trans
+&trans        &trans        &trans        &trans        &trans    &kp PAUSE_BREAK   &trans        &trans        &trans        &trans        &trans        &kp INS       &kp C_MUTE    &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
@@ -371,7 +354,7 @@
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &none         &kp RSFT      &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &none         &kp RSFT      &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
@@ -381,7 +364,7 @@
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &mo KL        &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &mo KL        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
