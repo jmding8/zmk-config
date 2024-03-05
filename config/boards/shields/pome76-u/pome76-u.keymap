@@ -237,7 +237,7 @@
         };
         combo_caps {
             timeout-ms = <SLOW_TIMEOUT>;
-            key-positions = <69 70>; /* Dot Space */
+            key-positions = <71 72>; /* NavLayer MediaLayer */
             bindings = <&kp CAPS>;
         };
         combo_rgui {
