@@ -217,7 +217,7 @@
 
         combo_sys {
             timeout-ms = <SLOW_TIMEOUT>;
-            key-positions = <0 1 2>; /* 1 2 3 */
+            key-positions = <73 74 75>; /* lower right hand corner */
             bindings = <&sl SYS>;
         };
         combo_tab {
