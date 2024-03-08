@@ -6,15 +6,15 @@
 // Layers Enum
 #define WIN 0     // Windows
 #define APE 1     // Apple
-#define DFL 2     // D+F layer
-#define JKL 3     // J+K layer
+#define DNF 2     // D and F layer
+#define JNK 3     // J and K layer
 #define NAV 4     // Navigation
 #define MED 5     // Media
 #define SYS 6     // System
-#define DL  7     // D-Layer
-#define SFL 8     // S/F-Layer
-#define KL  9     // K-Layer
-#define JLL 10    // J/L-Layer
+#define DL  7     // D layer
+#define SFL 8     // S or F layer
+#define KL  9     // K Layer
+#define JLL 10    // J or L layer
 
 // FAST_TIMEOUT is very short.
 // It is used mostly for combos involving keys that might occur in sequence while typing common words.
@@ -58,9 +58,9 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             bindings
-                = <&macro_press &mo SFL &mo DFL>
+                = <&macro_press &mo SFL &mo DNF>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo SFL &mo DFL>
+                , <&macro_release &mo SFL &mo DNF>
                 ;
         };
 
@@ -82,9 +82,9 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             bindings
-                = <&macro_press &mo JLL &mo JKL>
+                = <&macro_press &mo JLL &mo JNK>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo JLL &mo JKL>
+                , <&macro_release &mo JLL &mo JNK>
                 ;
         };
     };
@@ -234,7 +234,7 @@
             >;
         };
 
-        left_home_layer {
+        d_and_f_layer {
             bindings = <
 &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6        &trans        &trans        &trans        &trans        &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
@@ -244,7 +244,7 @@
             >;
         };
 
-        right_home_layer {
+        j_and_k_layer {
             bindings = <
 &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6        &trans        &trans        &trans        &trans        &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
@@ -288,13 +288,13 @@
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &kp LSFT      &none         &mo DFL       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &kp LSFT      &none         &mo DNF       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
 
-        sf_key_layer {
+        s_or_f_key_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
@@ -308,13 +308,13 @@
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &mo JKL       &none         &kp RSFT      &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &mo JNK       &none         &kp RSFT      &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
 
-        jl_key_layer {
+        j_or_l_key_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
