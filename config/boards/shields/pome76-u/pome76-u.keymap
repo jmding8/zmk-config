@@ -6,8 +6,8 @@
 // Layers Enum
 #define WIN 0     // Windows
 #define APL 1     // Apple
-#define LHm 2     // Left Home-row
-#define RHm 3     // Right Home-row
+#define DFL 2     // D+F layer
+#define JKL 3     // J+K layer
 #define NAV 4     // Navigation
 #define MED 5     // Media
 #define SYS 6     // System
@@ -66,9 +66,9 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             bindings
-                = <&macro_press &mo SFL &mo LHm>
+                = <&macro_press &mo SFL &mo DFL>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo SFL &mo LHm>
+                , <&macro_release &mo SFL &mo DFL>
                 ;
         };
 
@@ -90,35 +90,11 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             bindings
-                = <&macro_press &mo JLL &mo RHm>
+                = <&macro_press &mo JLL &mo JKL>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo JLL &mo RHm>
+                , <&macro_release &mo JLL &mo JKL>
                 ;
         };
-
-//        mcx: macro_x {
-//            label = "MACRO_X";
-//            compatible = "zmk,behavior-macro";
-//            #binding-cells = <0>;
-//            wait-ms = <0>;
-//            bindings
-//                = <&macro_press &mo XVL &kp LSFT>
-//                , <&macro_pause_for_release>
-//                , <&macro_release &mo XVL &kp LSFT>
-//                ;
-//        };
-//
-//        mcv: macro_v {
-//            label = "MACRO_V";
-//            compatible = "zmk,behavior-macro";
-//            #binding-cells = <0>;
-//            wait-ms = <0>;
-//            bindings
-//                = <&macro_press &mo XVL &mo FUN>
-//                , <&macro_pause_for_release>
-//                , <&macro_release &mo XVL &mo FUN>
-//                ;
-//        };
     };
 
     // Position documentation.
@@ -127,16 +103,9 @@
     // 56 is the start of the Z row
 
     behaviors {
-        // F-key: hold = flash, tap = F
-        fht: f_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "F_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <EXTREMELY_SLOW_TIMEOUT>;
-            bindings = <&bootloader>, <&kp>;
-        };
-
+        // ***********************************************************************************
+        // Home row combo-layer implementation
+        // ***********************************************************************************
         smt: s_macro_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "S_MACRO_TAP";
@@ -197,35 +166,18 @@
             hold-trigger-key-positions = <42 43 64 65 66 71 72>;
         };
 
-//        xmt: x_macro_tap {
-//            compatible = "zmk,behavior-hold-tap";
-//            label = "X_MACRO_TAP";
-//            #binding-cells = <2>;
-//            flavor = "tap-unless-interrupted";
-//            tapping-term-ms = <FAST_TIMEOUT>;
-//            bindings = <&mcx>, <&kp>;
-//            hold-trigger-key-positions = <49 50 64 65 66 71 72>;
-//        };
-//
-//        clt: c_layer_tap {
-//            compatible = "zmk,behavior-hold-tap";
-//            label = "C_LAYER_TAP";
-//            #binding-cells = <2>;
-//            flavor = "tap-unless-interrupted";
-//            tapping-term-ms = <FAST_TIMEOUT>;
-//            bindings = <&mo>, <&kp>;
-//            hold-trigger-key-positions = <48 50 64 65 66 71 72>;
-//        };
-//
-//        vmt: v_macro_tap {
-//            compatible = "zmk,behavior-hold-tap";
-//            label = "V_MACRO_TAP";
-//            #binding-cells = <2>;
-//            flavor = "tap-unless-interrupted";
-//            tapping-term-ms = <FAST_TIMEOUT>;
-//            bindings = <&mcv>, <&kp>;
-//            hold-trigger-key-positions = <48 49 64 65 66 71 72>;
-//        };
+        // ***********************************************************************************
+        // Other
+        // ***********************************************************************************
+        // F-key: hold = flash, tap = F
+        fht: f_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "F_HOLD_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <EXTREMELY_SLOW_TIMEOUT>;
+            bindings = <&bootloader>, <&kp>;
+        };
     };
 
     sl {
@@ -343,7 +295,7 @@
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &kp LSFT      &none         &mo LHm       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &kp LSFT      &none         &mo DFL       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
@@ -363,7 +315,7 @@
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &mo RHm       &trans        &kp RSFT      &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &mo JKL       &trans        &kp RSFT      &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
