@@ -6,16 +6,15 @@
 // Layers Enum
 #define WIN 0     // Windows
 #define APL 1     // Apple
-#define SYM 2     // Extra Symbols
-#define LHm 3     // Left Home-row
-#define RHm 4     // Right Home-row
-#define NAV 5     // Navigation
-#define MED 6     // Media
-#define SYS 7     // System
-#define DL  8     // D-Layer
-#define SFL 9     // S/F-Layer
-#define KL  10    // K-Layer
-#define JLL 11    // J/L-Layer
+#define LHm 2     // Left Home-row
+#define RHm 3     // Right Home-row
+#define NAV 4     // Navigation
+#define MED 5     // Media
+#define SYS 6     // System
+#define DL  7     // D-Layer
+#define SFL 8     // S/F-Layer
+#define KL  9     // K-Layer
+#define JLL 10    // J/L-Layer
 
 // FAST_TIMEOUT is very short.
 // It is used mostly for combos involving keys that might occur in sequence while typing common words.
@@ -287,16 +286,6 @@
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &kp LCTL      &kp LGUI      &kp LALT      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-            >;
-        };
-
-        symbols_layer {
-            bindings = <
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
 
