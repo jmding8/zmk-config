@@ -276,7 +276,7 @@
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp C_VOL_UP  &trans        &kp PRSC      &trans
 &trans        &kp SLCK      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp C_BRI_DN  &kp C_VOL_DN  &kp C_BRI_UP  &trans        &trans
-&trans        &trans        &trans        &trans        &trans    &kp PAUSE_BREAK   &trans        &trans        &trans        &trans        &trans        &kp INS       &kp C_MUTE    &trans        &trans
+&trans        &trans        &trans        &trans        &trans    &kp PAUSE_BREAK   &trans        &trans        &trans        &trans        &kp INS       &kp C_MUTE    &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
