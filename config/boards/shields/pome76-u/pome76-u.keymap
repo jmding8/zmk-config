@@ -39,8 +39,6 @@
 #define SLOW_TIMEOUT 200
 
 / {
-    behaviors {};
-
     macros {
         mcs: macro_s {
             label = "MACRO_S";
@@ -177,6 +175,7 @@
     sl {
         release-after-ms = <20000>; // 20 seconds
     };
+
     combos {
         compatible = "zmk,combos";
 
