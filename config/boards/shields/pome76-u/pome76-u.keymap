@@ -38,12 +38,6 @@
 // [?? 2022] Initialize 200 ms. Naively chosen to mimic QMK's default value of TAPPING_TERM.
 #define SLOW_TIMEOUT 200
 
-// EXTREMELY_SLOW_TIMEOUT is extremely long.
-// It is for hold-tap behaviors where the user needs to press and hold a key for a long time, to trigger an obscure behavior.
-// For example F => reboot in flashing mode.
-// [7Jan2024] Initialize 3000 ms.
-#define EXTREMELY_SLOW_TIMEOUT 3000
-
 / {
     behaviors {};
 
@@ -175,7 +169,7 @@
             label = "F_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <EXTREMELY_SLOW_TIMEOUT>;
+            tapping-term-ms = <2000>;
             bindings = <&bootloader>, <&kp>;
         };
     };
