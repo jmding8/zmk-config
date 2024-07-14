@@ -6,8 +6,8 @@
 // Layers Enum
 #define WIN 0     // Windows
 #define APL 1     // Apple
-#define DNF 2     // D and F layer
-#define JNK 3     // J and K layer
+#define DFL 2     // D and F layer
+#define JKL 3     // J and K layer
 #define NAV 4     // Navigation
 #define MED 5     // Media
 #define SYS 6     // System
@@ -64,9 +64,9 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             bindings
-                = <&macro_press &mo SFL &mo DNF>
+                = <&macro_press &mo SFL &mo DFL>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo SFL &mo DNF>
+                , <&macro_release &mo SFL &mo DFL>
                 ;
         };
 
@@ -88,9 +88,9 @@
             #binding-cells = <0>;
             wait-ms = <0>;
             bindings
-                = <&macro_press &mo JLL &mo JNK>
+                = <&macro_press &mo JLL &mo JKL>
                 , <&macro_pause_for_release>
-                , <&macro_release &mo JLL &mo JNK>
+                , <&macro_release &mo JLL &mo JKL>
                 ;
         };
     };
@@ -304,7 +304,7 @@
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &kp LSFT      &none         &mo DNF       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &kp LSFT      &none         &mo DFL       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
@@ -324,7 +324,7 @@
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &mo JNK       &none         &kp RSFT      &trans        &trans
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &mo JKL       &none         &kp RSFT      &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
