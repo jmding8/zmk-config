@@ -104,16 +104,6 @@
         // ***********************************************************************************
         // Home row combo-layer implementation
         // ***********************************************************************************
-        // F-key: hold = flash, tap = F
-        fht: f_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "F_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <EXTREMELY_SLOW_TIMEOUT>;
-            bindings = <&bootloader>, <&kp>;
-        };
-
         smt: s_macro_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "S_MACRO_TAP";
