@@ -242,7 +242,7 @@
         };
         combo_rgui {
             timeout-ms = <SLOW_TIMEOUT>;
-            key-positions = <56 71>; /* N NavLayer */
+            key-positions = <57 71>; /* M NavLayer */
             bindings = <&kp RGUI>;
         };
     };
