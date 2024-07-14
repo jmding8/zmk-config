@@ -5,7 +5,7 @@
 
 // Layers Enum
 #define WIN 0     // Windows
-#define APE 1     // Apple
+#define APL 1     // Apple
 #define DNF 2     // D and F layer
 #define JNK 3     // J and K layer
 #define NAV 4     // Navigation
@@ -38,11 +38,11 @@
 // [?? 2022] Initialize 200 ms. Naively chosen to mimic QMK's default value of TAPPING_TERM.
 #define SLOW_TIMEOUT 200
 
-// EXTREMELY_SLOW_COMBO_TIMEOUT is extremely long.
+// EXTREMELY_SLOW_TIMEOUT is extremely long.
 // It is for hold-tap behaviors where the user needs to press and hold a key for a long time, to trigger an obscure behavior.
 // For example F => reboot in flashing mode.
 // [7Jan2024] Initialize 3000 ms.
-#define EXTREMELY_SLOW_COMBO_TIMEOUT 3000
+#define EXTREMELY_SLOW_TIMEOUT 3000
 
 // [27Nov2023] Initialize at 80 ms.
 // [27Nov2023] 80 => 60 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
@@ -117,7 +117,7 @@
             label = "F_HOLD_TAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <EXTREMELY_SLOW_COMBO_TIMEOUT>;
+            tapping-term-ms = <EXTREMELY_SLOW_TIMEOUT>;
             bindings = <&bootloader>, <&kp>;
         };
 
@@ -301,7 +301,7 @@
             bindings = <
 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &to WIN       &trans        &sys_reset    &trans        &trans        &trans        &trans        &trans        &trans        &out OUT_USB  &trans        &trans        &trans        &trans
-&to APE       &trans        &trans        &fht F F      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&to APL       &trans        &trans        &fht F F      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &bt BT_CLR    &trans        &out OUT_BLE  &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
