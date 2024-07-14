@@ -26,15 +26,6 @@
 // [12Nov2023] 50 => 35 ms Decrease timout due to (fairly rare) unintentional combo activations. E.g. the word "sounds" comes out as "sounSHIFT".
 #define FAST_TIMEOUT 35
 
-// MEDIUM_TIMEOUT is an intermediate timeout.
-// It is mostly used for combos involving keys that infrequently occur in sequence while typing common words.
-// For example ,. => FSLH, because , and . only occur in sequence infrequently during normal typing (for example, if the user type's "<>").
-// [1Jan2024] Initialize 100 ms. Arbitarily chosen somewhere between FAST_TIMEOUT (35 ms) and SLOW_TIMEOUT (200 ms).
-// [1Jan2024] 100 => 75 ms because ,. => FSLH is unintentionally being triggered when I attempt to type "<>".
-// [1Jan2024] 75 => 50 ms because typing "<>" quickly still triggers FSLH too eagerly.
-// [3Feb2024] 50 => 67 ms because I am missing " (L+;) too frequently.
-#define MEDIUM_TIMEOUT 67
-
 // SLOW_TIMEOUT is very long.
 // It is mostly used for combos involving keys that are controlled by the same finger, and should therefore by typed relatively slowly and in strict sequence.
 // For example RG => TAB, because R and G are both actuated by the left index finger.
@@ -241,7 +232,7 @@
             bindings = <&kp CAPS>;
         };
         combo_rgui {
-            timeout-ms = <SLOW_TIMEOUT>;
+            timeout-ms = <FAST_TIMEOUT>;
             key-positions = <57 71>; /* M NavLayer */
             bindings = <&kp RGUI>;
         };
