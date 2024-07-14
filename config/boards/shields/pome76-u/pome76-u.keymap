@@ -178,6 +178,7 @@
         };
     };
 
+    // sl stands for Sticky Layer.
     sl {
         release-after-ms = <20000>; // 20 seconds
     };
