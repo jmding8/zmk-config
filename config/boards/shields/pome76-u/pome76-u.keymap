@@ -3,19 +3,36 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-// Layers Enum
+// ***********************************************************************************
+// Key positions
+// ***********************************************************************************
+// 19: R
+// 26: U
+// 32: S
+// 41: J
+// 46: Left Shift (start of Z row)
+// 57: M
+// (64, 65, 66): left hand modifier keys
+// 70: Space
+
+// ***********************************************************************************
+// Layer enums
+// ***********************************************************************************
 #define WIN 0     // Windows
 #define APL 1     // Apple
-#define DFL 2     // This layer is activated by the D or F keys
-#define JKL 3     // This layer is activated by the J or K keys
+#define DFL 2     // Layer that is controlled by the D or F keys
+#define JKL 3     // Layer that is controlled by the J or K keys
 #define NAV 4     // Navigation
 #define MED 5     // Media
 #define SYS 6     // System
-#define DL  7     // This layer is activated by the D key
-#define SFL 8     // This layer is activated by the S or F keys
-#define KL  9     // This layer is activated by the K key
-#define JLL 10    // This layer is activated by the J or L keys
+#define DL  7     // Layer that is controlled by the D key
+#define SFL 8     // Layer that is controlled by the S or F keys
+#define KL  9     // Layer that is controlled by the K key
+#define JLL 10    // Layer that is controlled by the J or L keys
 
+// ***********************************************************************************
+// Timeouts
+// ***********************************************************************************
 // FAST_TIMEOUT is very short.
 // It is used mostly for combos involving keys that might occur in sequence while typing common words.
 // For example SD => Shift, because S and D occur next to each other common words like "sounDS".
@@ -29,14 +46,15 @@
 // [?? 2022] Initialize 200 ms. Naively chosen to mimic QMK's default value of TAPPING_TERM.
 #define SLOW_TIMEOUT 200
 
-// EXTREMELY_SLOW_TIMEOUT is extremely long.
-// It is for hold-tap behaviors where the user needs to press and hold a key for a long time, to trigger an obscure behavior.
-// For example F => reboot in flashing mode.
-// [7Jan2024] Initialize 3000 ms.
-#define EXTREMELY_SLOW_TIMEOUT 3000
-
 / {
+    // ***********************************************************************************
+    // Macros
+    // ***********************************************************************************
     macros {
+
+        // ***********************************************************************************
+        // Combo based layers
+        // ***********************************************************************************
         mcs: macro_s {
             label = "MACRO_S";
             compatible = "zmk,behavior-macro";
@@ -87,20 +105,12 @@
     };
 
     // ***********************************************************************************
-    // Key positions
+    // Hold-Taps
     // ***********************************************************************************
-    // 19: R
-    // 26: U
-    // 32: S
-    // 41: J
-    // 46: Left Shift (start of Z row)
-    // 57: M
-    // (64, 65, 66): left hand modifier keys
-    // 70: Space
-
     behaviors {
+
         // ***********************************************************************************
-        // Home row combo-layer implementation
+        // Combo based layers
         // ***********************************************************************************
         smt: s_macro_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -163,9 +173,10 @@
         };
 
         // ***********************************************************************************
-        // Other
+        // Other hold-taps
         // ***********************************************************************************
-        // F-key: hold = flash, tap = F
+
+        // F-key (in system_layer): hold = flash, tap = F
         fht: f_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "F_HOLD_TAP";
@@ -181,6 +192,9 @@
         release-after-ms = <20000>; // 20 seconds
     };
 
+    // ***********************************************************************************
+    // Combos
+    // ***********************************************************************************
     combos {
         compatible = "zmk,combos";
 
@@ -211,6 +225,9 @@
         };
     };
 
+    // ***********************************************************************************
+    // Keymaps
+    // ***********************************************************************************
     keymap {
         compatible = "zmk,keymap";
 
