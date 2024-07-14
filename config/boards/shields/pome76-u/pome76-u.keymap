@@ -6,15 +6,15 @@
 // Layers Enum
 #define WIN 0     // Windows
 #define APL 1     // Apple
-#define DFL 2     // D and F layer
-#define JKL 3     // J and K layer
+#define DFL 2     // This layer is activated by the D or F keys
+#define JKL 3     // This layer is activated by the J or K keys
 #define NAV 4     // Navigation
 #define MED 5     // Media
 #define SYS 6     // System
-#define DL  7     // D layer
-#define SFL 8     // S or F layer
-#define KL  9     // K Layer
-#define JLL 10    // J or L layer
+#define DL  7     // This layer is activated by the D key
+#define SFL 8     // This layer is activated by the S or F keys
+#define KL  9     // This layer is activated by the K key
+#define JLL 10    // This layer is activated by the J or L keys
 
 // FAST_TIMEOUT is very short.
 // It is used mostly for combos involving keys that might occur in sequence while typing common words.
