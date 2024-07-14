@@ -86,10 +86,17 @@
         };
     };
 
-    // Position documentation.
-    // 64, 65, and 66 are left hand modifier keys
-    // 32 is S
-    // 56 is the start of the Z row
+    // ***********************************************************************************
+    // Key positions
+    // ***********************************************************************************
+    // 19: R
+    // 26: U
+    // 32: S
+    // 41: J
+    // 46: Left Shift (start of Z row)
+    // 57: M
+    // (64, 65, 66): left hand modifier keys
+    // 70: Space
 
     behaviors {
         // ***********************************************************************************
@@ -287,7 +294,7 @@
             >;
         };
 
-        s_or_f_key_layer {
+        s_and_f_key_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
@@ -307,7 +314,7 @@
             >;
         };
 
-        j_or_l_key_layer {
+        j_and_l_key_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
