@@ -197,11 +197,6 @@
             key-positions = <26 40>; /* U H */
             bindings = <&kp K_CMENU>;
         };
-        combo_caps {
-            timeout-ms = <SLOW_TIMEOUT>;
-            key-positions = <71 72>; /* NavLayer MediaLayer */
-            bindings = <&kp CAPS>;
-        };
         combo_rgui {
             timeout-ms = <FAST_TIMEOUT>;
             key-positions = <57 71>; /* M NavLayer */
@@ -257,7 +252,7 @@
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp UARW      &kp PGUP      &kp DEL       &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp LARW      &kp DARW      &kp RARW      &kp BKSP      &trans
-&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp PGDN      &kp HOME      &kp END       &trans        &kp RET
+&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp PGDN      &kp HOME      &kp END       &kp CAPS      &kp RET
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
