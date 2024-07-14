@@ -44,13 +44,6 @@
 // [7Jan2024] Initialize 3000 ms.
 #define EXTREMELY_SLOW_TIMEOUT 3000
 
-// [27Nov2023] Initialize at 80 ms.
-// [27Nov2023] 80 => 60 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
-// [27Nov2023] 80 => 35 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
-// [27Nov2023] 35 => 25 ms. Space combos occasionally trigger unintentionally. For example "git pull" comes out as "git\ull".
-// [14Dec2023] 25 => 35 ms. Sometimes combo attempts are missed. For example " ." => "/" comes out as " ." instead of the intended "/". Hopefully increasing timeout will improve that.
-#define SPACE_COMBO_TIMEOUT 30
-
 / {
     macros {
         mcs: macro_s {
