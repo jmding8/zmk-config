@@ -208,6 +208,11 @@
             key-positions = <19 35>; /* R G */
             bindings = <&kp TAB>;
         };
+        combo_tab_2 {
+            timeout-ms = <SLOW_TIMEOUT>;
+            key-positions = <19 34>; /* R F */
+            bindings = <&kp TAB>;
+        };
         combo_esc {
             timeout-ms = <SLOW_TIMEOUT>;
             key-positions = <34 35>; /* F G */
