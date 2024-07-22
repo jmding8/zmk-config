@@ -218,6 +218,11 @@
             key-positions = <26 40>; /* U H */
             bindings = <&kp K_CMENU>;
         };
+        combo_bksp {
+            timeout-ms = <SLOW_TIMEOUT>;
+            key-positions = <14 15>; /* Minus Equal */
+            bindings = <&kp K_CMENU>;
+        };
     };
 
     // ***********************************************************************************
