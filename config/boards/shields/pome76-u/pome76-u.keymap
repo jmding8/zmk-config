@@ -12,6 +12,7 @@
 // 41: J
 // 46: Left Shift (start of Z row)
 // 57: M
+// 61: start of bottom row
 // (64, 65, 66): left hand modifier keys
 // 70: Space
 
@@ -225,8 +226,10 @@
             bindings = <&kp BKSP>;
         };
         combo_esc_2 {
-            timeout-ms = <SLOW_TIMEOUT>;
-            key-positions = <0 1>; /* 0 1 */
+            // Previous timeouts:
+            // SLOW_TIMEOUT: false-positives when rolling "123" (a common pattern when typing random numbers)
+            timeout-ms = <FAST_TIMEOUT>;
+            key-positions = <0 1>; /* 0 1*/
             bindings = <&kp ESC>;
         };
     };
