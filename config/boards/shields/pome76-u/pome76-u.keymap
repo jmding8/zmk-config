@@ -239,6 +239,12 @@
             key-positions = <1 2>; /* 1 2 */
             bindings = <&kp RET>;
         };
+        combo_ret_3 {
+            // Previous timeouts:
+            timeout-ms = <FAST_TIMEOUT>;
+            key-positions = <49 50>; /* C V */
+            bindings = <&kp RET>;
+        };
     };
 
     // ***********************************************************************************
