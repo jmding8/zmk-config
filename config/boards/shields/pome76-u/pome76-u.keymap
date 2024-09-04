@@ -242,7 +242,7 @@
         combo_ret_3 {
             // Previous timeouts:
             timeout-ms = <FAST_TIMEOUT>;
-            key-positions = <49 50>; /* C V */
+            key-positions = <48 49>; /* X C */
             bindings = <&kp RET>;
         };
     };
