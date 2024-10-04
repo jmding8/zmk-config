@@ -192,7 +192,9 @@
             label = "V_LAYER_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <SLOW_TIMEOUT>;
+            // tap-unless-interrupted resolves to a tap when tapping-term-ms expires. We want very permissive
+            // hold behavior here, hence a very long tapping-term-ms configuration.
+            tapping-term-ms = <1000>;
             bindings = <&mo>, <&kp>;
         };
     };
