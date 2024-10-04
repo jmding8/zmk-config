@@ -234,21 +234,8 @@
         };
         combo_ret_2 {
             // Previous timeouts:
-            // SLOW_TIMEOUT: false-positives when rolling "123" (a common pattern when typing random numbers)
-            timeout-ms = <FAST_TIMEOUT>;
-            key-positions = <1 2>; /* 1 2 */
-            bindings = <&kp RET>;
-        };
-        combo_ret_3 {
-            // Previous timeouts:
             timeout-ms = <FAST_TIMEOUT>;
             key-positions = <48 49>; /* X C */
-            bindings = <&kp RET>;
-        };
-        combo_ret_4 {
-            // Previous timeouts:
-            timeout-ms = <FAST_TIMEOUT>;
-            key-positions = <19 20>; /* R T */
             bindings = <&kp RET>;
         };
     };
