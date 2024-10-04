@@ -192,9 +192,11 @@
             label = "V_LAYER_TAP";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            // tap-unless-interrupted resolves to a tap when tapping-term-ms expires. We want very permissive
-            // hold behavior here, hence a very long tapping-term-ms configuration.
-            tapping-term-ms = <1000>;
+            // nlt will be used to overload nav_layer + ESC. tap-unless-interrupted will
+            // resolve into ESC when tapping-term-ms expires. But ESC is a key that
+            // basically is never held intentionally. So we can get away with a very
+            // long tapping-term-ms configuration.
+            tapping-term-ms = <30000>;
             bindings = <&mo>, <&kp>;
         };
     };
