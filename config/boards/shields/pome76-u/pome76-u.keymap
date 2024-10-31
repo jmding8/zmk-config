@@ -228,12 +228,6 @@
         };
 
         // Combos to make left-hand-only operation easier
-        combo_lh_bksp {
-            // Previous timeouts:
-            timeout-ms = <FAST_TIMEOUT>;
-            key-positions = <47 48>; /* Z X */
-            bindings = <&kp BKSP>;
-        };
         combo_lh_ret {
             // Previous timeouts:
             timeout-ms = <FAST_TIMEOUT>;
@@ -245,6 +239,12 @@
             timeout-ms = <FAST_TIMEOUT>;
             key-positions = <49 50>; /* C V */
             bindings = <&kp DEL>;
+        };
+        combo_lh_bksp {
+            // Previous timeouts:
+            timeout-ms = <FAST_TIMEOUT>;
+            key-positions = <50 51>; /* V B */
+            bindings = <&kp BKSP>;
         };
     };
 
