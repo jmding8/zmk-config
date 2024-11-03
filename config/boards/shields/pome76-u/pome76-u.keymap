@@ -39,7 +39,9 @@
 // For example SD => Shift, because S and D occur next to each other common words like "sounDS".
 // See mercury-u.keymap for the early history of FAST_TIMEOUT values.
 // [12Nov2023] 50 => 35 ms Decrease timout due to (fairly rare) unintentional combo activations. E.g. the word "sounds" comes out as "sounSHIFT".
-#define FAST_TIMEOUT 35
+// [03Nov2024] 35 => 42 ms Increase timout. I physically modified my switches by adding shims to the center posts to reduce key travel. After
+//   this modification, SD is sometimes coming out as "sd" instead of the intended LShift.
+#define FAST_TIMEOUT 42
 
 // SLOW_TIMEOUT is very long.
 // It is mostly used for combos involving keys that are controlled by the same finger, and should therefore by typed relatively slowly and in strict sequence.
