@@ -41,6 +41,7 @@
 // [12Nov2023] 50 => 35 ms Decrease timout due to (fairly rare) unintentional combo activations. E.g. the word "sounds" comes out as "sounSHIFT".
 // [03Nov2024] 35 => 42 ms Increase timout. I physically modified my switches by adding shims to the center posts to reduce key travel. After
 //   this modification, SD is sometimes coming out as "sd" instead of the intended LShift.
+// [26Dec2024] 42 => 46 ms Increase timout. ,. => Enter sometimes comes out as ,. instead of the intended Enter
 #define FAST_TIMEOUT 42
 
 // SLOW_TIMEOUT is very long.
@@ -245,7 +246,7 @@
         combo_lh_bksp {
             // Previous timeouts:
             timeout-ms = <FAST_TIMEOUT>;
-            key-positions = <50 51>; /* V B */
+            key-positions = <48 50>; /* X V */
             bindings = <&kp BKSP>;
         };
     };
