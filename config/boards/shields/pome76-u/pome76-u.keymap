@@ -246,7 +246,7 @@
         combo_lh_bksp {
             // Previous timeouts:
             timeout-ms = <FAST_TIMEOUT>;
-            key-positions = <48 50>; /* X V */
+            key-positions = <34 50>; /* F V */
             bindings = <&kp BKSP>;
         };
     };
