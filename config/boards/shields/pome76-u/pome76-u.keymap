@@ -223,7 +223,13 @@
             bindings = <&kp K_CMENU>;
         };
 
-        combo_ret_3 {
+        combo_backtick {
+            timeout-ms = <SLOW_TIMEOUT>;
+            key-positions = <0 1>; /* 0 1 */
+            bindings = <&kp GRAV>;
+        };
+
+        combo_rh_ret {
             // Previous timeouts:
             timeout-ms = <FAST_TIMEOUT>;
             key-positions = <58 59>; /* , . */
@@ -281,7 +287,7 @@
             bindings = <
 &kp F1        &kp F2        &kp F3        &kp F4        &kp F5        &kp F6        &trans        &trans        &trans        &trans        &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans     &kp PRINTSCREEN  &trans
-&trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp GRAV      &kp LBKT      &kp RBKT      &trans        &trans
+&trans        &kp LSFT      &mo DL        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp LBKT      &kp RBKT      &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
