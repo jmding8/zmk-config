@@ -223,12 +223,6 @@
             bindings = <&kp K_CMENU>;
         };
 
-        combo_backtick {
-            timeout-ms = <SLOW_TIMEOUT>;
-            key-positions = <0 1>; /* 0 1 */
-            bindings = <&kp GRAV>;
-        };
-
         combo_rh_ret {
             // Previous timeouts:
             timeout-ms = <FAST_TIMEOUT>;
