@@ -48,7 +48,8 @@
 // It is mostly used for combos involving keys that are controlled by the same finger, and should therefore by typed relatively slowly and in strict sequence.
 // For example RG => TAB, because R and G are both actuated by the left index finger.
 // [?? 2022] Initialize 200 ms. Naively chosen to mimic QMK's default value of TAPPING_TERM.
-#define SLOW_TIMEOUT 200
+// [14Feb2025] Lower to 70 ms. Long timeout interferes with gaming. For example, F+G = ESC doesn't work well with F = Nova in Diablo 2.
+#define SLOW_TIMEOUT 70
 
 / {
     // ***********************************************************************************
