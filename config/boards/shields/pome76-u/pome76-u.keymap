@@ -227,7 +227,7 @@
         combo_rh_ret {
             // Previous timeouts:
             timeout-ms = <FAST_TIMEOUT>;
-            key-positions = <58 59>; /* , . */
+            key-positions = <57 58>; /* m , */
             bindings = <&kp RET>;
         };
 
