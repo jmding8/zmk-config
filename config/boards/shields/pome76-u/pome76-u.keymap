@@ -224,20 +224,14 @@
             bindings = <&kp K_CMENU>;
         };
 
+        // Combos to make one-handed operation easier
         combo_rh_ret {
-            // Previous timeouts:
-            timeout-ms = <FAST_TIMEOUT>;
-            key-positions = <57 58>; /* m , */
-            bindings = <&kp RET>;
-        };
-        combo_rh_ret_2 {
             // Previous timeouts:
             timeout-ms = <FAST_TIMEOUT>;
             key-positions = <40 41>; /* h j */
             bindings = <&kp RET>;
         };
 
-        // Combos to make left-hand-only operation easier
         combo_lh_ret {
             // Previous timeouts:
             timeout-ms = <FAST_TIMEOUT>;
