@@ -267,7 +267,7 @@
 &kp BKSP      &kp DEL       &kp SPC       &kp LGUI      &kp LCTL      &kp LALT      &kp SPC       &kp N0        &kp DOT       &kp SPC       &mo NAV       &mo MED       &kp BKSP      &kp DEL       &kp RET
             >;
         };
-           
+
         apple_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
