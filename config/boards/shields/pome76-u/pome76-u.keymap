@@ -39,13 +39,17 @@
 // For example SD => Shift, because S and D occur next to each other common words like "sounDS".
 // See mercury-u.keymap for the early history of FAST_TIMEOUT values.
 // [12Nov2023] 50 => 35 ms Decrease timout due to (fairly rare) unintentional combo activations. E.g. the word "sounds" comes out as "sounSHIFT".
-#define FAST_TIMEOUT 35
+// [03Nov2024] 35 => 42 ms Increase timout. I physically modified my switches by adding shims to the center posts to reduce key travel. After
+//   this modification, SD is sometimes coming out as "sd" instead of the intended LShift.
+// [26Dec2024] 42 => 46 ms Increase timout. ,. => Enter sometimes comes out as ,. instead of the intended Enter
+#define FAST_TIMEOUT 42
 
 // SLOW_TIMEOUT is very long.
 // It is mostly used for combos involving keys that are controlled by the same finger, and should therefore by typed relatively slowly and in strict sequence.
 // For example RG => TAB, because R and G are both actuated by the left index finger.
 // [?? 2022] Initialize 200 ms. Naively chosen to mimic QMK's default value of TAPPING_TERM.
-#define SLOW_TIMEOUT 200
+// [14Feb2025] Lower to 70 ms. Long timeout interferes with gaming. For example, F+G = ESC doesn't work well with F = Nova in Diablo 2.
+#define SLOW_TIMEOUT 70
 
 / {
     // ***********************************************************************************
@@ -220,23 +224,31 @@
             bindings = <&kp K_CMENU>;
         };
 
-        combo_bksp {
-            timeout-ms = <SLOW_TIMEOUT>;
-            key-positions = <14 15>; /* Minus Equal */
-            bindings = <&kp BKSP>;
-        };
-        combo_esc_2 {
+        // Combos to make one-handed operation easier
+        combo_rh_ret {
             // Previous timeouts:
-            // SLOW_TIMEOUT: false-positives when rolling "123" (a common pattern when typing random numbers)
             timeout-ms = <FAST_TIMEOUT>;
-            key-positions = <0 1>; /* 0 1 */
-            bindings = <&kp ESC>;
+            key-positions = <40 41>; /* h j */
+            bindings = <&kp RET>;
         };
-        combo_ret_2 {
+
+        combo_lh_ret {
             // Previous timeouts:
             timeout-ms = <FAST_TIMEOUT>;
             key-positions = <48 49>; /* X C */
             bindings = <&kp RET>;
+        };
+        combo_lh_del {
+            // Previous timeouts:
+            timeout-ms = <FAST_TIMEOUT>;
+            key-positions = <49 50>; /* C V */
+            bindings = <&kp DEL>;
+        };
+        combo_lh_bksp {
+            // Previous timeouts:
+            timeout-ms = <FAST_TIMEOUT>;
+            key-positions = <19 34 >; /* R F */
+            bindings = <&kp BKSP>;
         };
     };
 
@@ -252,17 +264,17 @@
 &kp Q         &kp W         &kp E         &kp R         &kp T         &kp N7        &kp N8        &kp N9        &kp KP_PLUS   &kp Y         &kp U         &kp I         &kp O         &kp P         &kp BSLH
 &kp A         &smt S S      &dlt DL D     &fmt F F      &kp G         &kp N4        &kp N5        &kp N6        &kp BKSP      &kp H         &jmt J J      &klt KL K     &lmt L L      &kp SCLN      &kp QUOT
 &kp LSFT      &kp Z         &kp X         &kp C         &kp V         &kp B         &kp N1        &kp N2        &kp N3        &kp BSLH      &kp N         &kp M         &kp CMMA      &kp DOT       &kp FSLH
-&kp BKSP      &kp DEL       &kp DEL       &kp LGUI      &kp LCTL      &kp LALT      &kp SPC       &kp N0        &kp DOT       &kp SPC       &mo NAV       &mo MED       &kp BKSP      &kp DEL       &kp RET
+&kp BKSP      &kp DEL       &kp SPC       &kp LGUI      &kp LCTL      &kp LALT      &kp SPC       &kp N0        &kp DOT       &kp SPC       &mo NAV       &mo MED       &kp BKSP      &kp DEL       &kp RET
             >;
         };
-        
+
         apple_layer {
             bindings = <
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &kp LCTL      &kp LGUI      &kp LALT      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+&trans        &trans        &trans        &kp LALT      &kp LGUI      &kp LCTL      &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
             >;
         };
 
