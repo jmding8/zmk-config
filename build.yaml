@@ -25,3 +25,5 @@ include:
     shield: pome76-u
   - board: nice_nano
     shield: pome76-k
+  - board: nice_nano
+    shield: settings_reset
